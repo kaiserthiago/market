@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+{% block head %} {% endblock %}
+    <title>{% block titulo %}SuperMarket{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static '/css/supermarket.css' %}">
+
+    {% block link_css %} {% endblock %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        {% block style %} {% endblock %}
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #195128;
+            color: white;
+            padding: 10px;
+            font-size: 8pt;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {# carrega diretório da imagem #}
+            {% load static %}
+            <a class="navbar-brand"><img src="{% static "img/logo.jpg" %}" class="img-rounded" alt="" width="45" height="30"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'supermarket.home' %}"><span class="glyphicon glyphicon-home"></span>
+                    Home</a></li>
+                <li><a href="{% url 'supermarket.produtos' %}"><span class="glyphicon glyphicon-tags"></span>
+                    Produtos</a></li>
+                <li><a href="{% url 'supermarket.promocoes' %}"><span class="glyphicon glyphicon-shopping-cart"></span>
+                    Promoções</a></li>
+                <li><a href="{% url 'supermarket.sobre' %}"><span class="glyphicon glyphicon-question-sign"></span>
+                    Sobre</a></li>
+                <li><a href="{% url 'supermarket.contato' %}"><span class="glyphicon glyphicon-envelope"></span> Contato</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'admin:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-2 sidenav" align="left">
+            <div class="panel panel-success">
+                <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Menu</div>
+                <div class="panel-body">
+                    <p><a href="{% url 'supermarket.home' %}"><span class="glyphicon glyphicon-home"></span>
+                        Home</a></p>
+                    <p><a href="{% url 'supermarket.produtos' %}"><span class="glyphicon glyphicon-tags"></span>
+                        Produtos</a></p>
+                    <p><a href="{% url 'supermarket.promocoes' %}"><span
+                            class="glyphicon glyphicon-shopping-cart"></span>
+                        Promoções</a></p>
+                    <p><a href="{% url 'supermarket.sobre' %}"><span class="glyphicon glyphicon-question-sign"></span>
+                        Sobre</a></p>
+                </div>
+            </div>
+
+            {% block menu_lateral_esquerdo %}{% endblock %}
+
+        </div>
+        <div class="col-sm-8 text-left">
+
+            {% block principal %} {% endblock %}
+
+        </div>
+        <div class="col-sm-2 sidenav" align="left">
+
+            {% block menu_lateral_direito %}{% endblock %}
+
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <p>Instituto Federal de Educação, Ciência e Tecnologia de Rondônia – Câmpus Cacoal<br>
+        Rodovia BR 364, KM 228, Lote 2-A, Zona Rural, Caixa Postal 146 - Cacoal/RO<br>
+        Telefone: (69) 3443-2445 E-mail: campuscacoal@ifro.edu.br / Site: www.ifro.edu.br</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends "supermarket/layout.html" %}
+
+{% block titulo %} SuperMarket - Promoções {% endblock %}
+
+{% block menu_lateral_esquerdo %}
+
+{% endblock %}
+
+{% block menu_lateral_direito %}
+    <div class="panel panel-info">
+        <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>
+        <div class="panel-body">{% for cliente in clientes %}
+            <p><a href="#">{{ cliente.nome_fantasia }}</a></p>
+        {% endfor %}
+        </div>
+    </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>
+        <div class="panel-body">
+            <p><a href="#">Maior preço</a></p>
+            <p><a href="#">Menor preço</a></p>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Ações</div>
+        <div class="panel-body">
+            <p><a href="{% url 'supermarket.nova_promocao' %}">Inserir</a></p>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block principal %}
+    <section xmlns="http://www.w3.org/1999/html">
+        <h2>Lista de promoções do produto pesquisado</h2>
+
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                {% for title_produto in produto_descricao %}
+                    <td>
+                        <img src="{{ title_produto.imagem.url }}" alt="Imagem">
+                    </td>
+                    <td>{{ title_produto.descricao }}<br>
+                        {{ title_produto.marca }} -
+                        {{ title_produto.unidade_de_medida }}</td>
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Estabelecimento</th>
+                <th>Valor</th>
+                <th>Válido até</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for produto in todos_produtos %}
+                <tr>
+                    <td>{{ produto.cliente.nome_fantasia }}</td>
+                    <td>R$ {{ produto.valor }}</td>
+                    <td>{{ produto.data_fim }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

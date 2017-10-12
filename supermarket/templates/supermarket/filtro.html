@@ -1,0 +1,23 @@
+{% extends "supermarket/layout.html" %}
+
+{% block titulo %} SuperMarket {% endblock %}
+
+{% block menu_lateral_esquerdo %}
+
+{% endblock %}
+
+{% block principal %}
+    <section>
+        {% for produto in filtro_produtos %}
+            <article>
+                <h2>{{ produto.produto }}</h2>
+                <p>
+                    Marca.: {{ produto.produto.marca }} </br>
+                    Unidade de Medida.: {{ produto.produto.unidade_de_medida }} </br>
+                    Valor unitário.: R$ {{ produto.valor }}
+                </p>
+            </article>
+            <hr>
+        {% endfor %}
+    </section>
+{% endblock %}
