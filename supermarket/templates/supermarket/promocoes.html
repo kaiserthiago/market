@@ -183,8 +183,7 @@
             </tr>
             </tbody>
         </table>
-        {% for produto in todos_produtos %}
-            <table class="table table-striped">
+        <table class="table table-striped">
             <thead>
             <tr>
                 <th>Estabelecimento</th>
@@ -192,24 +191,22 @@
                 <th>Válido até</th>
             </tr>
             </thead>
-        {% empty %}
-        {% endfor %}
-        <tbody>
-        {% for produto in todos_produtos %}
-            <tr>
-                <td style="vertical-align: middle">
-                    <img src="{{ produto.produto.imagem.url }}" width="100" height="100"></td>
-                <td>{{ produto.produto.descricao }}<br>
-                    {{ produto.produto.marca }} -
-                    {{ produto.produto.unidade_de_medida }}</td>
-                <td>{{ produto.cliente.nome_fantasia }}</td>
-                <td>R$ {{ produto.valor }}</td>
-                <td>{{ produto.data_fim }}</td>
-            </tr>
-        {% empty %}
-            <h2>Sem promoções no momento!</h2>
-        {% endfor %}
-        </tbody>
+            <tbody>
+            {% for produto in todos_produtos %}
+                <tr>
+                    <td style="vertical-align: middle">
+                        <img src="{{ produto.produto.imagem.url }}" width="100" height="100"></td>
+                    <td>{{ produto.produto.descricao }}<br>
+                        {{ produto.produto.marca }} -
+                        {{ produto.produto.unidade_de_medida }}</td>
+                    <td>{{ produto.cliente.nome_fantasia }}</td>
+                    <td>R$ {{ produto.valor }}</td>
+                    <td>{{ produto.data_fim }}</td>
+                </tr>
+            {% empty %}
+                <h2>Sem promoções no momento!</h2>
+            {% endfor %}
+            </tbody>
         </table>
     </section>
 {% endblock %}

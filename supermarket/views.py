@@ -24,7 +24,7 @@ def produtos_por_categoria(request, categoria_id):
 def promocao_por_produto(request, produto_id):
     todas_categorias = Categoria.objects.all()
     filtro_produtos = Promocao.objects.filter(produto=produto_id, data_fim__gte=date.today()).order_by(
-        'data_fim', 'cliente__nome_fantasia')
+        'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
     descricao = Produto.objects.filter(id=produto_id)
 
     context = {
@@ -66,7 +66,7 @@ def produtos(request):
 def promocoes(request):
     todas_categorias = Categoria.objects.all()
     todos_produtos = Promocao.objects.filter(data_fim__gte=date.today()).order_by(
-        'data_fim', 'cliente__nome_fantasia')
+        'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
     clientes = Cliente.objects.all()
 
     context = {
