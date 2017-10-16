@@ -49,7 +49,8 @@
             </tr>
             </tbody>
         </table>
-        <table class="table table-striped">
+        {% for produto in todos_produtos %}
+            <table class="table table-striped">
             <thead>
             <tr>
                 <th>Estabelecimento</th>
@@ -57,17 +58,19 @@
                 <th>Válido até</th>
             </tr>
             </thead>
-            <tbody>
-            {% for produto in todos_produtos %}
-                <tr>
-                    <td>{{ produto.cliente.nome_fantasia }}</td>
-                    <td>R$ {{ produto.valor }}</td>
-                    <td>{{ produto.data_fim }}</td>
-                </tr>
-            {% empty %}
-                <h2>Não há promoções para o produto pesquisado!</h2>
-            {% endfor %}
-            </tbody>
+        {% empty %}
+        {% endfor %}
+        <tbody>
+        {% for produto in todos_produtos %}
+            <tr>
+                <td>{{ produto.cliente.nome_fantasia }}</td>
+                <td>R$ {{ produto.valor }}</td>
+                <td>{{ produto.data_fim }}</td>
+            </tr>
+        {% empty %}
+            <h2>Sem promoções no momento!</h2>
+        {% endfor %}
+        </tbody>
         </table>
     </section>
 {% endblock %}

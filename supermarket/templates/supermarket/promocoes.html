@@ -147,7 +147,7 @@
         <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
         <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
         <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-        {#    <script src="busca_produto.js"></script>#}
+        {#    <script src="app.js"></script>#}
 
         <script>
             var algolia = algoliasearch("SCWGZ4PA3L", "b8015d39267687e1c6f000ff2f94b6b6");
@@ -158,7 +158,8 @@
                     source: autocomplete.sources.hits(post_index, {hitsPerPage: 5}),
                     templates: {
                         suggestion: function (suggestion) {
-                            return suggestion._highlightResult.descricao.value;
+                            return suggestion._highlightResult.descricao.value + ' - ' + suggestion._highlightResult.marca.value
+                                + ' - ' + suggestion._highlightResult.unidade_de_medida.value;
                         }
                     }
                 }
@@ -207,7 +208,7 @@
                     <td>{{ produto.data_fim }}</td>
                 </tr>
             {% empty %}
-                <h2>Não há promoções para o produto pesquisado!</h2>
+                <h2>Sem promoções no momento!</h2>
             {% endfor %}
             </tbody>
         </table>

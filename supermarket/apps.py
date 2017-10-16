@@ -13,9 +13,11 @@ class SupermarketConfig(AppConfig):
         algoliasearch.register(Promocao, PromocaoIndex)
 
 class ProdutoIndex(AlgoliaIndex):
-    fields = ('id', 'descricao')
-    settings = {'searchableAttributes': ['descricao']}
+    fields = ('id', 'descricao', 'marca', 'unidade_de_medida', 'imagem')
+    settings = {'searchableAttributes': ['descricao', 'marca', 'unidade_de_medida', 'id'],
+                'customRanking': ['asc(descricao)'],}
     index_name = 'lista_produto'
+
 
 class PromocaoIndex(AlgoliaIndex):
     fields = ('id', 'produto', 'cliente')

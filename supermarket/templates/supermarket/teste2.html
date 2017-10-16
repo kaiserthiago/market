@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlgoliaSearch Example | {% block title %}{% endblock %}</title>
+
+    <link href="//cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        #hits-stat a {
+            display: inline-block;
+            background: #23282D;
+            padding: 1px 3px;
+        }
+
+        #hits-stat img {
+            height: 1em;
+        }
+
+        .mark, mark {
+            padding: 0;
+        }
+
+        .twitter-typeahead {
+            width: 100%;
+        }
+
+        .twitter-typeahead .tt-input, .twitter-typeahead .tt-hint {
+            width: 100%;
+            margin: 0px;
+            padding: 8px 12px;
+            outline: none;
+        }
+
+        .twitter-typeahead .tt-input:focus {
+            border: 2px solid #0097cf;
+        }
+
+        .twitter-typeahead .tt-hint {
+            color: #999;
+        }
+
+        .twitter-typeahead .tt-dropdown-menu {
+            width: 100%;
+            padding: 0;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-top: 0px;
+        }
+
+        .twitter-typeahead .tt-dropdown-menu .tt-suggestion {
+            text-align: left;
+            padding: 3px 20px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .twitter-typeahead .tt-dropdown-menu .tt-suggestion.tt-cursor {
+            color: #fff;
+            background-color: #0097cf;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <input id="q" name="q" placeholder="Busca por descrição ou marca..." autocomplete="off" autocorrect="false"
+                   spellcheck="false"
+                   class="form-control" type="search"/>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12" id="hits-stat">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="no-hits" class="col-sm-12 hidden"></div>
+
+            <table id="hits-table" class="table table-striped hidden">
+                <thead>
+                <tr>
+                    <th style="width: 30%;">Produto</th>
+                    <th style="witdh: 35%;">Marca</th>
+                    <th style="width: 35%;">Unidade de medida</th>
+                </tr>
+                </thead>
+                <tbody id="hits">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.js"></script>
+<script src="//cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/g/algoliasearch,algoliasearch.helper"></script>
+<script src="//cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.js"></script>
+
+{% verbatim %}
+<script type="text/template" id="hit-template">
+    <tr>
+        <td>{{{ _highlightResult.descricao.value}}}</td>
+        <td>{{{ _highlightResult.marca.value }}}</td>
+        <td>{{{ _highlightResult.unidade_de_medida.value }}}</td>
+    </tr>
+</script>
+{% endverbatim %}
+<script>
+    $(document).ready(function () {
+        var $inputField = $('#q');
+        var $hits = $('#hits');
+        var $hitsTable = $('#hits-table');
+        var $noHits = $('#no-hits');
+        var $hitsStat = $('#hits-stat');
+        var hitTemplate = Hogan.compile($('#hit-template').text());
+        var client = algoliasearch('SCWGZ4PA3L', 'b8015d39267687e1c6f000ff2f94b6b6');
+        var helper = algoliasearchHelper(client, 'lista_produto');
+        $('.search-terms a').click(function (e) {
+            $inputField.val($(this).text()).change().focus();
+            $inputField.keyup();
+        });
+        $inputField.on('keyup', function () {
+            var query = $inputField.val();
+            helper.setQuery(query).search();
+        }).focus();
+        helper.on('result', function (data) {
+            renderHits(data);
+        });
+        helper.search(); // first search
+        function renderHits(content) {
+            var hitsHtml = '';
+            if (content.hits.length === 0) {
+                hitsHtml = '<p class="text-center text-danger lead">Não encontramos o produto pesquisado... =[</p>';
+                $noHits.html(hitsHtml);
+                $noHits.removeClass('hidden');
+                $hitsTable.addClass('hidden');
+            } else {
+                for (var i = 0; i < content.hits.length; ++i) {
+                    hitsHtml += hitTemplate.render(content.hits[i]);
+                }
+                $hits.html(hitsHtml);
+                $hitsTable.removeClass('hidden');
+                $noHits.addClass('hidden');
+            }
+            $hitsStat.html('<p class="text-right">Encontrados <b>' +
+                content.nbHits + '</b> resultados</p>'
+            );
+        }
+    });
+</script>
+</body>
+</html>
