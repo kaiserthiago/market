@@ -66,15 +66,12 @@
                 <span class="icon-bar"></span>
             </button>
             {# carrega diretório da imagem #}
-            {% load static %}
-            <a class="navbar-brand"><img src="{% static "img/logo.jpg" %}" class="img-rounded" alt="" width="45" height="30"></a>
+            <a class="navbar-brand"><img src="/media/img/logo.png" class="img-rounded" alt="" width="45" height="30"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{% url 'supermarket.home' %}"><span class="glyphicon glyphicon-home"></span>
                     Home</a></li>
-                <li><a href="{% url 'supermarket.produtos' %}"><span class="glyphicon glyphicon-tags"></span>
-                    Produtos</a></li>
                 <li><a href="{% url 'supermarket.promocoes' %}"><span class="glyphicon glyphicon-shopping-cart"></span>
                     Promoções</a></li>
                 <li><a href="{% url 'supermarket.sobre' %}"><span class="glyphicon glyphicon-question-sign"></span>
@@ -97,13 +94,13 @@
                 <div class="panel-body">
                     <p><a href="{% url 'supermarket.home' %}"><span class="glyphicon glyphicon-home"></span>
                         Home</a></p>
-                    <p><a href="{% url 'supermarket.produtos' %}"><span class="glyphicon glyphicon-tags"></span>
-                        Produtos</a></p>
                     <p><a href="{% url 'supermarket.promocoes' %}"><span
                             class="glyphicon glyphicon-shopping-cart"></span>
                         Promoções</a></p>
                     <p><a href="{% url 'supermarket.sobre' %}"><span class="glyphicon glyphicon-question-sign"></span>
                         Sobre</a></p>
+                     <p><a href="{% url 'supermarket.contato' %}"><span class="glyphicon glyphicon-envelope"></span>
+                        Contato</a></p>
                 </div>
             </div>
 

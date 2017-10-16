@@ -13,14 +13,14 @@ class MarcaAdmin(admin.ModelAdmin):
     search_fields = ['descricao_marca']
 
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'descricao', 'categoria')
+    list_display = ('descricao', 'id', 'categoria')
     search_fields = ['descricao', 'categoria']
 
 class CategoriaAdmin(admin.ModelAdmin):
     search_fields = ['descricao']
 
 class PromocaoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'cliente', 'produto', 'data_inicio', 'data_fim', 'valor')
+    list_display = ('cliente', 'produto', 'data_inicio', 'data_fim', 'valor', 'id')
     search_fields = ['cliente', 'produto', 'cliente']
     list_filter = ['cliente', 'produto', 'data_inicio', 'data_fim', 'valor']
 

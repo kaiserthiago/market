@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url, include, static
 from django.contrib import admin
+from django.conf.urls.static import static
+
 
 from market import settings
 from supermarket import views
 
 urlpatterns = [
-    url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', admin.site.urls, name='market.admin'),
     url(r'^supermarket/', include('supermarket.urls')),
 ]
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 admin.site.site_header = 'SuperMarket - Admin'

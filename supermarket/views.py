@@ -1,5 +1,5 @@
 from django.db.models import Avg, Count
-from django.http import HttpResponse
+from datetime import date
 from django.shortcuts import render, redirect
 
 # função pra trazer post pela categoria clicada
@@ -20,30 +20,33 @@ def produtos_por_categoria(request, categoria_id):
 
     return render(request, 'supermarket/produtos.html', context)
 
+
 def promocao_por_produto(request, produto_id):
     todas_categorias = Categoria.objects.all()
-    filtro_produtos = Promocao.objects.filter(produto=produto_id).order_by('cliente__nome_fantasia')
+    filtro_produtos = Promocao.objects.filter(produto=produto_id, data_fim__gte=date.today()).order_by(
+        'data_fim', 'cliente__nome_fantasia')
     descricao = Produto.objects.filter(id=produto_id)
 
     context = {
         'todos_produtos': filtro_produtos,
         'todas_categorias': todas_categorias,
-        'produto_descricao': descricao
+        'produto_descricao': descricao,
     }
 
-    return render(request, 'supermarket/promocoes.html', context)
+    return render(request, 'supermarket/promocoes_por_produto.html', context)
+
 
 def home(request):
-
     return render(request, 'supermarket/home.html', {})
 
-def sobre(request):
 
+def sobre(request):
     return render(request, 'supermarket/sobre.html', {})
 
-def contato(request):
 
+def contato(request):
     return render(request, 'supermarket/contato.html', {})
+
 
 def produtos(request):
     todos_produtos = Produto.objects.all()
@@ -56,9 +59,11 @@ def produtos(request):
 
     return render(request, 'supermarket/produtos.html', context)
 
+
 def promocoes(request):
     todas_categorias = Categoria.objects.all()
-    todos_produtos = Promocao.objects.all().annotate(Count('produto'))
+    todos_produtos = Promocao.objects.filter(data_fim__gte=date.today()).order_by(
+        'data_fim', 'cliente__nome_fantasia')
     clientes = Cliente.objects.all()
 
     context = {
@@ -68,6 +73,7 @@ def promocoes(request):
     }
 
     return render(request, 'supermarket/promocoes.html', context)
+
 
 def nova_promocao(request):
     form = FormPromocao(request.POST)
@@ -89,6 +95,7 @@ def nova_promocao(request):
         form = FormPromocao()
 
     return render(request, 'supermarket/novo_promocao.html', {'nova_promocao': form})
+
 
 def novo_produto(request):
     form = FormProduto(request.POST)
