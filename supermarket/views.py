@@ -36,9 +36,6 @@ def promocao_por_produto(request, produto_id):
     return render(request, 'supermarket/promocoes_por_produto.html', context)
 
 
-def teste(request):
-    return render(request, 'supermarket/teste.html', {})
-
 def teste2(request):
     return render(request, 'supermarket/teste2.html', {})
 
