@@ -11,11 +11,16 @@
 {% endblock %}
 
 {% block principal %}
-    <section xmlns="http://www.w3.org/1999/html">
-        <h1>SuperMarket</h1>
-        <h3>Uma nova experiência em pesquisa de produtos de supermercados</h3>
-        <br><br><br>
-        {% load static %}
-        <img class="img-responsive" src=" {% static '/img/logo_top.png' %}" alt="SuperMarket">
-    </section>
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>SuperMarket</h2><br>
+                <p>Uma nova experiência em pesquisa de produtos de supermercados</p>
+                <br>
+            </div>
+            {% load static %}
+            <img class="img-responsive" src=" {% static '/img/logo_top.png' %}" alt="SuperMarket">
+        </div>
+    </div>
+
 {% endblock %}

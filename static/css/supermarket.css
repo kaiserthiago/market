@@ -1,5 +1,5 @@
-body{
-    font-family: Arial,sans-serif;
+body {
+    font-family: Arial, sans-serif;
 }
 
 .p {
@@ -7,8 +7,10 @@ body{
     text-indent: 50px;
 }
 
-.footer{
+.footer {
     text-indent: 0px;
     text-align: center;
     font-size: 6pt;
 }
+
+
