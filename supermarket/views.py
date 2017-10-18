@@ -24,7 +24,7 @@ def produtos_por_categoria(request, categoria_id):
 def promocao_por_produto(request, produto_id):
     todas_categorias = Categoria.objects.all()
     filtro_produtos = Promocao.objects.filter(produto=produto_id, data_fim__gte=date.today()).order_by(
-        'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
+        'valor', 'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
     descricao = Produto.objects.filter(id=produto_id)
 
     context = {
@@ -34,6 +34,20 @@ def promocao_por_produto(request, produto_id):
     }
 
     return render(request, 'supermarket/promocoes_por_produto.html', context)
+
+# def order_promocao_por_produto(request, ordem, produto_id):
+#     todas_categorias = Categoria.objects.all()
+#     filtro_produtos = Promocao.objects.filter(produto=produto_id, data_fim__gte=date.today()).order_by(
+#         'valor', 'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
+#     descricao = Produto.objects.filter(id=produto_id)
+#
+#     context = {
+#         'todos_produtos': filtro_produtos,
+#         'todas_categorias': todas_categorias,
+#         'produto_descricao': descricao,
+#     }
+#
+#     return render(request, 'supermarket/promocoes_por_produto.html', context)
 
 
 def teste2(request):
