@@ -1,0 +1,14 @@
+body{
+    font-family: Arial,sans-serif;
+}
+
+.p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.footer{
+    text-indent: 0px;
+    text-align: center;
+    font-size: 6pt;
+}
