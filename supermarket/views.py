@@ -81,6 +81,20 @@ def promocoes(request):
     return render(request, 'supermarket/promocoes.html', context)
 
 
+def filtro_promocoes(request, cliente_id):
+    todas_categorias = Categoria.objects.all()
+    todos_produtos = Promocao.objects.filter(cliente=cliente_id, data_fim__gte=date.today()).order_by(
+        'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
+    clientes = Cliente.objects.all()
+
+    context = {
+        'todas_categorias': todas_categorias,
+        'todos_produtos': todos_produtos,
+        'clientes': clientes,
+    }
+
+    return render(request, 'supermarket/promocoes.html', context)
+
 def nova_promocao(request):
     form = FormPromocao(request.POST)
 
