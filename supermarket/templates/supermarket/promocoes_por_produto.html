@@ -41,9 +41,9 @@
                     <td style="vertical-align:middle" width="200" height="220">
                         <img class="img-responsive" src="{{ title_produto.imagem.url }}" width="200" height="200">
                     </td>
-                    <td style="vertical-align:middle">{{ title_produto.descricao }}<br>
+                    <td style="vertical-align:middle"><h2>{{ title_produto.descricao }}<br>
                         {{ title_produto.marca }} -
-                        {{ title_produto.unidade_de_medida }}</td>
+                        {{ title_produto.unidade_de_medida }}</h2></td>
                 {% endfor %}
             </tr>
             </tbody>
@@ -51,9 +51,9 @@
             <table class="table table-responsive table-striped">
             <thead>
             <tr>
-                <th>Estabelecimento</th>
-                <th>Valor</th>
-                <th>Válido até</th>
+                <th>ESTABELECIMENTO</th>
+                <th>VALOR</th>
+                <th>VÁLIDO ATÉ</th>
             </tr>
             </thead>
         <tbody>
