@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c54a2c-9282-425e-9325-b4e6b4b78199" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/base.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/img/logo_footer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/img/logo_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/supermarket/css/supermarket.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/supermarket/img/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/supermarket/img/logo_footer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/supermarket/img/logo_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/supermarket/img_produtos/arroz.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/supermarket/img_produtos/leite_piracanjuba.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/layout.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/urls.py" afterPath="$PROJECT_DIR$/supermarket/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/views.py" afterPath="$PROJECT_DIR$/supermarket/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="955">
@@ -64,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="272" column="37" lean-forward="true" selection-start-line="272" selection-start-column="37" selection-end-line="272" selection-end-column="37" />
+              <caret line="272" column="37" lean-forward="false" selection-start-line="272" selection-start-column="37" selection-end-line="272" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -76,18 +63,18 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2427">
-              <caret line="4" column="62" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="62" />
+            <state relative-caret-position="623">
+              <caret line="69" column="72" lean-forward="false" selection-start-line="69" selection-start-column="72" selection-end-line="69" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="325">
+              <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -202,17 +189,17 @@
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/app.js" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/teste.html" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" />
         <option value="$PROJECT_DIR$/supermarket/apps.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
         <option value="$PROJECT_DIR$/market/settings.py" />
         <option value="$PROJECT_DIR$/supermarket/proxy.py" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/layout.html" />
         <option value="$PROJECT_DIR$/supermarket/urls.py" />
         <option value="$PROJECT_DIR$/supermarket/views.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/base.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/layout.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" />
       </list>
     </option>
   </component>
@@ -687,26 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2427">
-          <caret line="4" column="62" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="272" column="37" lean-forward="true" selection-start-line="272" selection-start-column="37" selection-end-line="272" selection-end-column="37" />
+          <caret line="272" column="37" lean-forward="false" selection-start-line="272" selection-start-column="37" selection-end-line="272" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -726,6 +697,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="955">
           <caret line="171" column="20" lean-forward="false" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="69" column="72" lean-forward="false" selection-start-line="69" selection-start-column="72" selection-end-line="69" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
           <folding />
         </state>
       </provider>
