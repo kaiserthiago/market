@@ -21,7 +21,6 @@ class CategoriaAdmin(admin.ModelAdmin):
 
 class PromocaoAdmin(admin.ModelAdmin):
     list_display = ('cliente', 'produto', 'data_inicio', 'data_fim', 'valor', 'id')
-    search_fields = ['cliente', 'produto', 'cliente']
     list_filter = ['cliente', 'produto', 'data_inicio', 'data_fim', 'valor']
 
 admin.site.register(Cliente, ClienteAdmin)

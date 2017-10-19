@@ -167,8 +167,7 @@
                     }
                 }
             ]).on('autocomplete:selected', function (event, suggestion, dataset) {
-                console.log(suggestion);
-                window.location.href = "promocao_por_produto/" + suggestion.id;
+                window.location.replace('/supermarket/promocao_por_produto/'+suggestion.id);
 
             });
         </script>
