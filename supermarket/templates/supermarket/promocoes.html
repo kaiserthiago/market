@@ -11,7 +11,7 @@
     .aa-input-search {
     min-width: 400px;
     padding: 12px 28px 12px 12px;
-    border: 2px solid #e4e4e4;
+    border: 3px solid #e4e4e4;
     border-radius: 4px;
     -webkit-transition: .2s;
     transition: .2s;
@@ -23,6 +23,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
     }
 
     .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button,
@@ -50,19 +51,20 @@
 
     .aa-dropdown-menu {
     background-color: #fff;
-    border: 1px solid rgba(228, 228, 228, 0.6);
-    #border-top-width: 0;
-    #font-family: "Montserrat", sans-serif;
-    min-width: 400px;
-    margin-top: 10px;
+    border: 3px solid rgba(228, 228, 228, 0.6);
+    border-top-width: 1px;
+    font-family: "Montserrat", sans-serif;
+    width: 400px;
+    margin-top: 7px;
     box-shadow: 4px 4px 0 rgba(241, 241, 241, 0.35);
-    #font-size: 11px;
+    font-size: 13px;
     border-radius: 4px;
     box-sizing: border-box;
     }
 
     .aa-suggestion {
-    padding: 6px 12px;
+    padding: 10px;
+    border-top: 2px solid rgba(228, 228, 228, 0.6);
     cursor: pointer;
     -webkit-transition: .2s;
     transition: .2s;
@@ -71,10 +73,36 @@
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     }
+
+
+
+
+    .aa-suggestion > span:first-child {
+    color: #333;
+    }
+
+    .aa-suggestion > span:last-child {
+    text-transform: uppercase;
+    color: #a9a9a9;
+    }
+
+    .aa-suggestion > span:first-child em,
+    .aa-suggestion > span:last-child em {
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgba(58, 150, 207, 0.1);
+    padding: 2px 0 2px 2px;
+    }
+
+
+
+
+
 
     .aa-dropdown-menu .aa-suggestion em {
     font-weight: bold;
@@ -159,15 +187,17 @@
             autocomplete("#search", {hint: false}, [
                 {
                     source: autocomplete.sources.hits(post_index, {hitsPerPage: 5}),
+                    displayKey: 'descricao',
                     templates: {
                         suggestion: function (suggestion) {
-                            return suggestion._highlightResult.descricao.value + ' - ' + suggestion._highlightResult.marca.value
-                                + ' - ' + suggestion._highlightResult.unidade_de_medida.value;
+                            return '<span>' +
+                                suggestion._highlightResult.descricao.value + '</span><span>' +
+                                suggestion._highlightResult.marca.value + '</span>';
                         }
                     }
                 }
             ]).on('autocomplete:selected', function (event, suggestion, dataset) {
-                window.location.replace('/supermarket/promocao_por_produto/'+suggestion.id);
+                window.location.replace('/supermarket/promocao_por_produto/' + suggestion.id);
 
             });
         </script>
