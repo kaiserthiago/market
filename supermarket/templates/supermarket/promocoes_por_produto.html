@@ -7,13 +7,16 @@
 {% endblock %}
 
 {% block menu_lateral_direito %}
-{#    <div class="panel panel-info">#}
-{#        <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>#}
-{#        <div class="panel-body">{% for cliente in clientes %}#}
-{#            <p><a href="#">{{ cliente.nome_fantasia }}</a></p>#}
-{#        {% endfor %}#}
-{#        </div>#}
-{#    </div>#}
+    <div class="panel panel-success">
+        <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>
+         <div class="panel-body">
+{#            {% for cliente in clientes %}#}
+{#                <p><a href="{% url 'supermarket.filtro_promocao' cliente.id %}">{{ cliente.nome_fantasia }}</a></p>#}
+{#            {% endfor %}#}
+{#            <hr>#}
+            <p><a href="{% url 'supermarket.promocoes' %}">Todas promoções</a></p>
+        </div>
+    </div>
 {#{% for title_produto in produto_descricao %}#}
 {#    <div class="panel panel-info">#}
 {#        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>#}
@@ -51,9 +54,9 @@
             <table class="table table-responsive table-striped">
             <thead>
             <tr>
-                <th>ESTABELECIMENTO</th>
-                <th>VALOR</th>
-                <th>VÁLIDO ATÉ</th>
+                <th>Estabelecimento</th>
+                <th>Valor</th>
+                <th>Válido até</th>
             </tr>
             </thead>
         <tbody>
