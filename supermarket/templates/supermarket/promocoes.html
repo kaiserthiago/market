@@ -135,18 +135,18 @@
 
 {% endblock %}
 
-{% block menu_lateral_direito %}
-    <div class="panel panel-success">
-        <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>
-        <div class="panel-body">
-            {% for cliente in clientes %}
-                <p><a href="{% url 'supermarket.filtro_promocao' cliente.id %}">{{ cliente.nome_fantasia }}</a></p>
-            {% endfor %}
-            <hr>
-            <p><a href="{% url 'supermarket.promocoes' %}">Todas promoções</a></p>
-        </div>
-    </div>
-
+{#{% block menu_lateral_direito %}#}
+{#    <div class="panel panel-success">#}
+{#        <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>#}
+{#        <div class="panel-body">#}
+{#            {% for cliente in clientes %}#}
+{#                <p><a href="{% url 'supermarket.filtro_promocao' cliente.id %}">{{ cliente.nome_fantasia }}</a></p>#}
+{#            {% endfor %}#}
+{#            <hr>#}
+{#            <p><a href="{% url 'supermarket.promocoes' %}">Todas promoções</a></p>#}
+{#        </div>#}
+{#    </div>#}
+{##}
     {#    <div class="panel panel-info">#}
     {#        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>#}
     {#        <div class="panel-body">#}
@@ -161,8 +161,8 @@
     {#            <p><a href="{% url 'supermarket.nova_promocao' %}">Inserir</a></p>#}
     {#        </div>#}
     {#    </div>#}
-
-{% endblock %}
+{##}
+{#{% endblock %}#}
 
 {% block principal %}
     {#    <section xmlns="http://www.w3.org/1999/html">#}
@@ -230,18 +230,18 @@
     {#        </table>#}
     {#    </section>#}
 
-    <div class="container">
+    <div class="container-fluid">
         <h2>Lista de Promoções</h2>
-        <p>Filtre as promoções pelo produto, marca...</p>
-        <div class="input-group">
-            <input id="myInput" class="form-control" placeholder="Busca de produtos..." autofocus/>
-            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <p>Filtre as promoções pelo produto, marca, estabelecimento ou validade da promoção.</p>
+        <div class="form-group">
+            <input id="myInput" type="text" class="form-control" placeholder="Busca de produtos..." autofocus/>
+{#            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>#}
         </div>
         {#    <div class="form-group">#}
         {#        <input class="form-control" type="search" id="myInput" placeholder="Busca por produtos..."#}
         {#               autocomplete="off" autofocus/>#}
         {#    </div>#}
-        <div>
+        <div style="overflow-x:auto">
             <table class="table table-responsive table-striped">
                 <thead>
                 <tr>
@@ -256,7 +256,7 @@
                 {% for produto in todos_produtos %}
                     <tr class='clickable-row'
                         data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">
-                        <td>
+                        <td style="padding: 5px" style="vertical-align: middle">
                             <img src="{{ produto.produto.imagem.url }}" class="img-responsive" width="75">
                         </td>
                         <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>
