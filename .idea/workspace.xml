@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c54a2c-9282-425e-9325-b4e6b4b78199" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/app.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/views.py" afterPath="$PROJECT_DIR$/supermarket/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,21 +19,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/base.html">
+      <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10375">
-              <caret line="415" column="0" lean-forward="false" selection-start-line="415" selection-start-column="0" selection-end-line="442" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="405">
+              <caret line="256" column="19" lean-forward="false" selection-start-line="256" selection-start-column="19" selection-end-line="256" selection-end-column="19" />
+              <folding>
+                <marker date="1508507016227" expanded="false" signature="7387:7409" ph="..." />
+                <marker date="1508507016227" expanded="false" signature="7586:7608" ph="..." />
+                <marker date="1508507016227" expanded="false" signature="7686:7708" ph="..." />
+                <marker date="1508507016227" expanded="false" signature="7773:7795" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="194" column="82" lean-forward="false" selection-start-line="194" selection-start-column="82" selection-end-line="194" selection-end-column="82" />
+            <state relative-caret-position="2525">
+              <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -49,12 +54,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="teste2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="653" column="4" lean-forward="true" selection-start-line="653" selection-start-column="4" selection-end-line="693" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="630">
+              <caret line="759" column="9" lean-forward="true" selection-start-line="710" selection-start-column="0" selection-end-line="759" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1508506821059" expanded="false" signature="17554:17565" ph="..." />
+                <marker date="1508506821059" expanded="false" signature="17615:17626" ph="..." />
+                <marker date="1508506821059" expanded="false" signature="17674:17685" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,21 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2525">
-              <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supermarket/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1659">
-              <caret line="85" column="50" lean-forward="false" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+            <state relative-caret-position="298">
+              <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -152,6 +162,7 @@
       <find>algoliasearch.helper</find>
       <find>urll</find>
       <find>hit-template</find>
+      <find>name.vale</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Python36\Lib\site-packages\django\contrib\contenttypes</dir>
@@ -191,7 +202,6 @@
         <option value="$PROJECT_DIR$/supermarket/proxy.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/base.html" />
         <option value="$PROJECT_DIR$/static/css/supermarket.css" />
-        <option value="$PROJECT_DIR$/supermarket/views.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/layout.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" />
@@ -199,6 +209,7 @@
         <option value="$PROJECT_DIR$/supermarket/urls.py" />
         <option value="$PROJECT_DIR$/supermarket/admin.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
+        <option value="$PROJECT_DIR$/supermarket/views.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
       </list>
@@ -239,6 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,8 +292,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,12 +301,12 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Dados\Desktop\Python\market\supermarket\templates\supermarket" />
-      <recent name="D:\Dados\Desktop\Python\market\supermarket" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Dados\Desktop\Python\market" />
+      <recent name="D:\Dados\Desktop\Python\market\supermarket" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dados\Desktop\Python\market\supermarket\templates\supermarket" />
       <recent name="D:\Dados\Desktop\Python\market\supermarket" />
     </key>
   </component>
@@ -396,13 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/supermarket/migrations/0014_auto_20171007_2103.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/migrations/0015_produto_marca.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -519,7 +523,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1508507016227" expanded="false" signature="7387:7409" ph="..." />
+            <marker date="1508507016227" expanded="false" signature="7586:7608" ph="..." />
+            <marker date="1508507016227" expanded="false" signature="7686:7708" ph="..." />
+            <marker date="1508507016227" expanded="false" signature="7773:7795" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -530,13 +539,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="81" column="40" lean-forward="false" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/app.css" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -583,14 +586,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/teste.html" />
-    <entry file="file://$PROJECT_DIR$/supermarket/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -640,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2525">
-          <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10375">
@@ -690,10 +677,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1508506821059" expanded="false" signature="17554:17565" ph="..." />
+            <marker date="1508506821059" expanded="false" signature="17615:17626" ph="..." />
+            <marker date="1508506821059" expanded="false" signature="17674:17685" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1659">
-          <caret line="85" column="50" lean-forward="false" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+        <state relative-caret-position="298">
+          <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -708,19 +716,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2525">
+          <caret line="101" column="69" lean-forward="false" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="653" column="4" lean-forward="true" selection-start-line="653" selection-start-column="4" selection-end-line="693" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="630">
+          <caret line="759" column="9" lean-forward="true" selection-start-line="710" selection-start-column="0" selection-end-line="759" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1508506821059" expanded="false" signature="17554:17565" ph="..." />
+            <marker date="1508506821059" expanded="false" signature="17615:17626" ph="..." />
+            <marker date="1508506821059" expanded="false" signature="17674:17685" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="194" column="82" lean-forward="false" selection-start-line="194" selection-start-column="82" selection-end-line="194" selection-end-column="82" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="256" column="19" lean-forward="false" selection-start-line="256" selection-start-column="19" selection-end-line="256" selection-end-column="19" />
+          <folding>
+            <marker date="1508507016227" expanded="false" signature="7387:7409" ph="..." />
+            <marker date="1508507016227" expanded="false" signature="7586:7608" ph="..." />
+            <marker date="1508507016227" expanded="false" signature="7686:7708" ph="..." />
+            <marker date="1508507016227" expanded="false" signature="7773:7795" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
