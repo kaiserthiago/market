@@ -147,20 +147,20 @@
 {#        </div>#}
 {#    </div>#}
 {##}
-    {#    <div class="panel panel-info">#}
-    {#        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>#}
-    {#        <div class="panel-body">#}
-    {#            <p><a href="#">Maior preço</a></p>#}
-    {#            <p><a href="#">Menor preço</a></p>#}
-    {#        </div>#}
-    {#    </div>#}
-    {##}
-    {#    <div class="panel panel-success">#}
-    {#        <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Ações</div>#}
-    {#        <div class="panel-body">#}
-    {#            <p><a href="{% url 'supermarket.nova_promocao' %}">Inserir</a></p>#}
-    {#        </div>#}
-    {#    </div>#}
+{#    <div class="panel panel-info">#}
+{#        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>#}
+{#        <div class="panel-body">#}
+{#            <p><a href="#">Maior preço</a></p>#}
+{#            <p><a href="#">Menor preço</a></p>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="panel panel-success">#}
+{#        <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Ações</div>#}
+{#        <div class="panel-body">#}
+{#            <p><a href="{% url 'supermarket.nova_promocao' %}">Inserir</a></p>#}
+{#        </div>#}
+{#    </div>#}
 {##}
 {#{% endblock %}#}
 
@@ -188,7 +188,7 @@
     {#                {#}
     {#                    source: autocomplete.sources.hits(post_index, {hitsPerPage: 5}),#}
     {#                    displayKey: 'descricao',#}
-    {#                    templates: {#}
+    {#                    mestrado: {#}
     {#                        suggestion: function (suggestion) {#}
     {#                            return '<span>' +#}
     {#                                suggestion._highlightResult.descricao.value + '</span><span>' +#}
@@ -235,7 +235,7 @@
         <p>Filtre as promoções pelo produto, marca, estabelecimento ou validade da promoção.</p>
         <div class="form-group">
             <input id="myInput" type="text" class="form-control" placeholder="Busca de produtos..." autofocus/>
-{#            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>#}
+            {#            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>#}
         </div>
         {#    <div class="form-group">#}
         {#        <input class="form-control" type="search" id="myInput" placeholder="Busca por produtos..."#}
@@ -266,10 +266,33 @@
                         <td style="vertical-align: middle">{{ produto.data_fim }}</td>
                     </tr>
                 {% empty %}
-                    <h2>Sem promoções no momento!</h2>
+                    <tr>
+                        <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
+                    </tr>
                 {% endfor %}
                 </tbody>
             </table>
+            {% if todos_produtos.has_other_pages %}
+                <ul class="pagination">
+                    {% if todos_produtos.has_previous %}
+                        <li><a href="?page={{ todos_produtos.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><span>&laquo;</span></li>
+                    {% endif %}
+                    {% for i in todos_produtos.paginator.page_range %}
+                        {% if todos_produtos.number == i %}
+                            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                        {% else %}
+                            <li><a href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if todos_produtos.has_next %}
+                        <li><a href="?page={{ todos_produtos.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><span>&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
         </div>
     </div>
     <script>

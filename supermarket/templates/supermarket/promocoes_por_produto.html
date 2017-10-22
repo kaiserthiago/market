@@ -9,29 +9,29 @@
 {% block menu_lateral_direito %}
     <div class="panel panel-success">
         <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>
-         <div class="panel-body">
-{#            {% for cliente in clientes %}#}
-{#                <p><a href="{% url 'supermarket.filtro_promocao' cliente.id %}">{{ cliente.nome_fantasia }}</a></p>#}
-{#            {% endfor %}#}
-{#            <hr>#}
+        <div class="panel-body">
+            {#            {% for cliente in clientes %}#}
+            {#                <p><a href="{% url 'supermarket.filtro_promocao' cliente.id %}">{{ cliente.nome_fantasia }}</a></p>#}
+            {#            {% endfor %}#}
+            {#            <hr>#}
             <p><a href="{% url 'supermarket.promocoes' %}">Todas promoções</a></p>
         </div>
     </div>
-{#{% for title_produto in produto_descricao %}#}
-{#    <div class="panel panel-info">#}
-{#        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>#}
-{#        <div class="panel-body">#}
-{#            <p><a href="#">Maior preço</a></p>#}
-{#            <p><a href="#">Menor preço</a></p>#}
-{#        </div>#}
-{#    </div>#}
-{#{% endfor %}#}
-{#    <div class="panel panel-success">#}
-{#        <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Ações</div>#}
-{#        <div class="panel-body">#}
-{#            <p><a href="{% url 'supermarket.nova_promocao' %}">Inserir</a></p>#}
-{#        </div>#}
-{#    </div>#}
+    {#{% for title_produto in produto_descricao %}#}
+    {#    <div class="panel panel-info">#}
+    {#        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>#}
+    {#        <div class="panel-body">#}
+    {#            <p><a href="#">Maior preço</a></p>#}
+    {#            <p><a href="#">Menor preço</a></p>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#{% endfor %}#}
+    {#    <div class="panel panel-success">#}
+    {#        <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Ações</div>#}
+    {#        <div class="panel-body">#}
+    {#            <p><a href="{% url 'supermarket.nova_promocao' %}">Inserir</a></p>#}
+    {#        </div>#}
+    {#    </div>#}
 
 {% endblock %}
 
@@ -51,7 +51,7 @@
             </tr>
             </tbody>
         </table>
-            <table class="table table-responsive table-striped">
+        <table class="table table-responsive table-striped">
             <thead>
             <tr>
                 <th>Estabelecimento</th>
@@ -59,17 +59,19 @@
                 <th>Válido até</th>
             </tr>
             </thead>
-        <tbody>
-        {% for produto in todos_produtos %}
-            <tr>
-                <td>{{ produto.cliente.nome_fantasia }}</td>
-                <td>R$ {{ produto.valor }}</td>
-                <td>{{ produto.data_fim }}</td>
-            </tr>
-        {% empty %}
-            <h2>Sem promoções no momento!</h2>
-        {% endfor %}
-        </tbody>
+            <tbody>
+            {% for produto in todos_produtos %}
+                <tr>
+                    <td>{{ produto.cliente.nome_fantasia }}</td>
+                    <td>R$ {{ produto.valor }}</td>
+                    <td>{{ produto.data_fim }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
+                </tr>
+            {% endfor %}
+            </tbody>
         </table>
     </section>
 {% endblock %}
