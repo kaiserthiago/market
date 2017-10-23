@@ -94,19 +94,19 @@ def produtos(request):
 
 def promocoes(request):
     todas_categorias = Categoria.objects.all()
-    produtos = Promocao.objects.filter(data_fim__gte=date.today()).order_by(
+    todos_produtos = Promocao.objects.filter(data_fim__gte=date.today()).order_by(
         'data_fim', 'produto__descricao', 'valor', 'cliente__nome_fantasia')
     clientes = Cliente.objects.all()
 
-    page = request.GET.get('page', 1)
-    paginator = Paginator(produtos, 4)
-
-    try:
-        todos_produtos = paginator.page(page)
-    except PageNotAnInteger:
-        todos_produtos = paginator.page(1)
-    except EmptyPage:
-        todos_produtos = paginator.page(paginator.num_pages)
+    # page = request.GET.get('page', 1)
+    # paginator = Paginator(produtos, 4)
+    #
+    # try:
+    #     todos_produtos = paginator.page(page)
+    # except PageNotAnInteger:
+    #     todos_produtos = paginator.page(1)
+    # except EmptyPage:
+    #     todos_produtos = paginator.page(paginator.num_pages)
 
     context = {
         'todas_categorias': todas_categorias,
