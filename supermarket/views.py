@@ -37,6 +37,11 @@ def promocao_por_produto(request, produto_id):
         'valor', 'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
     descricao = Produto.objects.filter(id=produto_id)
 
+    # cont = Promocao.objects.filter(produto=produto_id).count()
+    #
+    # for cliente in cont:
+    #     teste = Promocao.objects.filter(produto=produto_id, cliente=cliente.id).order_by('data_inicio')
+
     queryset = Promocao.objects.filter(produto=produto_id).order_by('data_inicio')
     datas = [obj.data_inicio for obj in queryset]
     precos = [float(obj.valor) for obj in queryset]
