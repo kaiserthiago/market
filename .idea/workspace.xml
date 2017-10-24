@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c54a2c-9282-425e-9325-b4e6b4b78199" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/views.py" afterPath="$PROJECT_DIR$/supermarket/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,28 +17,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="240" column="0" lean-forward="true" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+            <state relative-caret-position="373">
+              <caret line="255" column="0" lean-forward="true" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
               <folding>
-                <element signature="e#10922#10942#0#HTML" expanded="true" />
-                <element signature="e#10943#10973#0#HTML" expanded="true" />
-                <element signature="e#11205#11235#0#HTML" expanded="true" />
-                <element signature="e#11420#11450#0#HTML" expanded="true" />
-                <element signature="e#11528#11558#0#HTML" expanded="true" />
-                <element signature="e#11623#11653#0#HTML" expanded="true" />
-                <element signature="e#13097#13117#0#HTML" expanded="true" />
-                <element signature="e#13118#13148#0#HTML" expanded="true" />
-                <element signature="e#13412#13442#0#HTML" expanded="true" />
-                <element signature="e#13643#13673#0#HTML" expanded="true" />
-                <element signature="e#13759#13789#0#HTML" expanded="true" />
-                <element signature="e#13862#13892#0#HTML" expanded="true" />
-                <marker date="1508886966421" expanded="false" signature="7647:7669" ph="..." />
-                <marker date="1508886966421" expanded="false" signature="7854:7876" ph="..." />
-                <marker date="1508886966421" expanded="false" signature="7958:7980" ph="..." />
-                <marker date="1508886966421" expanded="false" signature="8049:8071" ph="..." />
+                <element signature="e#10958#10978#0#HTML" expanded="true" />
+                <element signature="e#10979#11009#0#HTML" expanded="true" />
+                <element signature="e#11241#11271#0#HTML" expanded="true" />
+                <element signature="e#11456#11486#0#HTML" expanded="true" />
+                <element signature="e#11564#11594#0#HTML" expanded="true" />
+                <element signature="e#11659#11689#0#HTML" expanded="true" />
+                <element signature="e#13133#13153#0#HTML" expanded="true" />
+                <element signature="e#13154#13184#0#HTML" expanded="true" />
+                <element signature="e#13448#13478#0#HTML" expanded="true" />
+                <element signature="e#13679#13709#0#HTML" expanded="true" />
+                <element signature="e#13795#13825#0#HTML" expanded="true" />
+                <element signature="e#13898#13928#0#HTML" expanded="true" />
+                <marker date="1508887393457" expanded="false" signature="7647:7669" ph="..." />
+                <marker date="1508887393457" expanded="false" signature="7854:7876" ph="..." />
+                <marker date="1508887393457" expanded="false" signature="7958:7980" ph="..." />
+                <marker date="1508887393457" expanded="false" signature="8049:8071" ph="..." />
               </folding>
             </state>
           </provider>
@@ -99,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="promocoes_por_produto.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="promocoes_por_produto.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2425">
-              <caret line="97" column="40" lean-forward="false" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+            <state relative-caret-position="305">
+              <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -218,8 +217,8 @@
         <option value="$PROJECT_DIR$/static/css/supermarket.css" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" />
         <option value="$PROJECT_DIR$/supermarket/views.py" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
       </list>
     </option>
   </component>
@@ -523,22 +522,22 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10922#10942#0#HTML" expanded="true" />
-            <element signature="e#10943#10973#0#HTML" expanded="true" />
-            <element signature="e#11205#11235#0#HTML" expanded="true" />
-            <element signature="e#11420#11450#0#HTML" expanded="true" />
-            <element signature="e#11528#11558#0#HTML" expanded="true" />
-            <element signature="e#11623#11653#0#HTML" expanded="true" />
-            <element signature="e#13097#13117#0#HTML" expanded="true" />
-            <element signature="e#13118#13148#0#HTML" expanded="true" />
-            <element signature="e#13412#13442#0#HTML" expanded="true" />
-            <element signature="e#13643#13673#0#HTML" expanded="true" />
-            <element signature="e#13759#13789#0#HTML" expanded="true" />
-            <element signature="e#13862#13892#0#HTML" expanded="true" />
-            <marker date="1508886966421" expanded="false" signature="7647:7669" ph="..." />
-            <marker date="1508886966421" expanded="false" signature="7854:7876" ph="..." />
-            <marker date="1508886966421" expanded="false" signature="7958:7980" ph="..." />
-            <marker date="1508886966421" expanded="false" signature="8049:8071" ph="..." />
+            <element signature="e#10958#10978#0#HTML" expanded="true" />
+            <element signature="e#10979#11009#0#HTML" expanded="true" />
+            <element signature="e#11241#11271#0#HTML" expanded="true" />
+            <element signature="e#11456#11486#0#HTML" expanded="true" />
+            <element signature="e#11564#11594#0#HTML" expanded="true" />
+            <element signature="e#11659#11689#0#HTML" expanded="true" />
+            <element signature="e#13133#13153#0#HTML" expanded="true" />
+            <element signature="e#13154#13184#0#HTML" expanded="true" />
+            <element signature="e#13448#13478#0#HTML" expanded="true" />
+            <element signature="e#13679#13709#0#HTML" expanded="true" />
+            <element signature="e#13795#13825#0#HTML" expanded="true" />
+            <element signature="e#13898#13928#0#HTML" expanded="true" />
+            <marker date="1508887393457" expanded="false" signature="7647:7669" ph="..." />
+            <marker date="1508887393457" expanded="false" signature="7854:7876" ph="..." />
+            <marker date="1508887393457" expanded="false" signature="7958:7980" ph="..." />
+            <marker date="1508887393457" expanded="false" signature="8049:8071" ph="..." />
           </folding>
         </state>
       </provider>
@@ -721,14 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2425">
-          <caret line="97" column="40" lean-forward="false" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -741,26 +732,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="240" column="0" lean-forward="true" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+        <state relative-caret-position="373">
+          <caret line="255" column="0" lean-forward="true" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
-            <element signature="e#10922#10942#0#HTML" expanded="true" />
-            <element signature="e#10943#10973#0#HTML" expanded="true" />
-            <element signature="e#11205#11235#0#HTML" expanded="true" />
-            <element signature="e#11420#11450#0#HTML" expanded="true" />
-            <element signature="e#11528#11558#0#HTML" expanded="true" />
-            <element signature="e#11623#11653#0#HTML" expanded="true" />
-            <element signature="e#13097#13117#0#HTML" expanded="true" />
-            <element signature="e#13118#13148#0#HTML" expanded="true" />
-            <element signature="e#13412#13442#0#HTML" expanded="true" />
-            <element signature="e#13643#13673#0#HTML" expanded="true" />
-            <element signature="e#13759#13789#0#HTML" expanded="true" />
-            <element signature="e#13862#13892#0#HTML" expanded="true" />
-            <marker date="1508886966421" expanded="false" signature="7647:7669" ph="..." />
-            <marker date="1508886966421" expanded="false" signature="7854:7876" ph="..." />
-            <marker date="1508886966421" expanded="false" signature="7958:7980" ph="..." />
-            <marker date="1508886966421" expanded="false" signature="8049:8071" ph="..." />
+            <element signature="e#10958#10978#0#HTML" expanded="true" />
+            <element signature="e#10979#11009#0#HTML" expanded="true" />
+            <element signature="e#11241#11271#0#HTML" expanded="true" />
+            <element signature="e#11456#11486#0#HTML" expanded="true" />
+            <element signature="e#11564#11594#0#HTML" expanded="true" />
+            <element signature="e#11659#11689#0#HTML" expanded="true" />
+            <element signature="e#13133#13153#0#HTML" expanded="true" />
+            <element signature="e#13154#13184#0#HTML" expanded="true" />
+            <element signature="e#13448#13478#0#HTML" expanded="true" />
+            <element signature="e#13679#13709#0#HTML" expanded="true" />
+            <element signature="e#13795#13825#0#HTML" expanded="true" />
+            <element signature="e#13898#13928#0#HTML" expanded="true" />
+            <marker date="1508887393457" expanded="false" signature="7647:7669" ph="..." />
+            <marker date="1508887393457" expanded="false" signature="7854:7876" ph="..." />
+            <marker date="1508887393457" expanded="false" signature="7958:7980" ph="..." />
+            <marker date="1508887393457" expanded="false" signature="8049:8071" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
