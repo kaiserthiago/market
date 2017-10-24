@@ -89,13 +89,13 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="{% url 'supermarket.home' %}"><span class="glyphicon glyphicon-home"></span>
+                <li{% block class_home %}{% endblock %}><a href="{% url 'supermarket.home' %}"><span class="glyphicon glyphicon-home"></span>
                     Home</a></li>
-                <li><a href="{% url 'supermarket.promocoes' %}"><span class="glyphicon glyphicon-shopping-cart"></span>
+                <li{% block class_promocoes %}{% endblock %}><a href="{% url 'supermarket.promocoes' %}"><span class="glyphicon glyphicon-shopping-cart"></span>
                     Promoções</a></li>
-                <li><a href="{% url 'supermarket.sobre' %}"><span class="glyphicon glyphicon-question-sign"></span>
+                <li {% block class_sobre %}{% endblock %}><a href="{% url 'supermarket.sobre' %}"><span class="glyphicon glyphicon-question-sign"></span>
                     Sobre</a></li>
-                <li><a href="{% url 'supermarket.contato' %}"><span class="glyphicon glyphicon-envelope"></span> Contato</a>
+                <li{% block class_contato %}{% endblock %}><a href="{% url 'supermarket.contato' %}"><span class="glyphicon glyphicon-envelope"></span> Contato</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
