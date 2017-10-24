@@ -2,6 +2,8 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Avg, Count
 from datetime import date
 from django.shortcuts import render, redirect
+import json
+import datetime
 
 # função pra trazer post pela categoria clicada
 from supermarket.forms import FormPromocao, FormProduto
@@ -22,19 +24,33 @@ def produtos_por_categoria(request, categoria_id):
     return render(request, 'supermarket/produtos.html', context)
 
 
+def date_handler(obj):
+    if hasattr(obj, 'isoformat'):
+        return obj.isoformat()
+    else:
+        raise TypeError
+
+
 def promocao_por_produto(request, produto_id):
     todas_categorias = Categoria.objects.all()
     filtro_produtos = Promocao.objects.filter(produto=produto_id, data_fim__gte=date.today()).order_by(
         'valor', 'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
     descricao = Produto.objects.filter(id=produto_id)
 
+    queryset = Promocao.objects.filter(produto=produto_id)
+    datas = [obj.data_inicio for obj in queryset]
+    precos = [float(obj.valor) for obj in queryset]
+
     context = {
         'todos_produtos': filtro_produtos,
         'todas_categorias': todas_categorias,
         'produto_descricao': descricao,
+        'datas': json.dumps(datas, default=date_handler),
+        'precos': json.dumps(precos),
     }
 
     return render(request, 'supermarket/promocoes_por_produto.html', context)
+
 
 # def order_promocao_por_produto(request, ordem, produto_id):
 #     todas_categorias = Categoria.objects.all()
@@ -65,8 +81,10 @@ def teste2(request):
 
     return render(request, 'supermarket/teste2.html', context)
 
+
 def base(request):
     return render(request, 'supermarket/base.html', {})
+
 
 def home(request):
     return render(request, 'supermarket/home.html', {})
@@ -130,6 +148,7 @@ def filtro_promocoes(request, cliente_id):
     }
 
     return render(request, 'supermarket/promocoes.html', context)
+
 
 def nova_promocao(request):
     form = FormPromocao(request.POST)

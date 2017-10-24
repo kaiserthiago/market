@@ -36,42 +36,94 @@
 {% endblock %}
 
 {% block principal %}
-    <section xmlns="http://www.w3.org/1999/html">
-        <table class="table table-responsive">
-            <tbody>
-            <tr>
-                {% for title_produto in produto_descricao %}
-                    <td style="vertical-align:middle" width="200" height="220">
-                        <img class="img-responsive" src="{{ title_produto.imagem.url }}" width="200" height="200">
-                    </td>
-                    <td style="vertical-align:middle"><h2>{{ title_produto.descricao }}<br>
-                        {{ title_produto.marca }} -
-                        {{ title_produto.unidade_de_medida }}</h2></td>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-responsive table-bordered">
+                <tbody>
+                <tr>
+                    {% for title_produto in produto_descricao %}
+                        <td style="vertical-align:middle">
+                            <img class="img-responsive" src="{{ title_produto.imagem.url }}" width="200">
+                        </td>
+                        <td style="vertical-align:middle"><h2>{{ title_produto.descricao }}<br>
+                            {{ title_produto.marca }} -
+                            {{ title_produto.unidade_de_medida }}</h2></td>
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+            <table class="table table-responsive table-striped">
+                <thead>
+                <tr>
+                    <th>Estabelecimento</th>
+                    <th>Valor</th>
+                    <th>Válido até</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for produto in todos_produtos %}
+                    <tr>
+                        <td>{{ produto.cliente.nome_fantasia }}</td>
+                        <td>R$ {{ produto.valor }}</td>
+                        <td>{{ produto.data_fim }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
+                    </tr>
                 {% endfor %}
-            </tr>
-            </tbody>
-        </table>
-        <table class="table table-responsive table-striped">
-            <thead>
-            <tr>
-                <th>Estabelecimento</th>
-                <th>Valor</th>
-                <th>Válido até</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for produto in todos_produtos %}
-                <tr>
-                    <td>{{ produto.cliente.nome_fantasia }}</td>
-                    <td>R$ {{ produto.valor }}</td>
-                    <td>{{ produto.data_fim }}</td>
-                </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </section>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center">Histório de preços</h2>
+            <canvas id="productsChart" width="300" height="50"></canvas>
+
+            <script>
+                var ctx = document.getElementById("productsChart");
+                var datas = JSON.parse('{{ datas|safe }}');
+                var precos = JSON.parse('{{ precos|safe }}');
+                var productsChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: datas,
+                        datasets: [{
+                            label: 'Datas',
+                            data: precos,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
 {% endblock %}
