@@ -38,7 +38,6 @@
 
         /* Set black background color, white text and some padding */
 
-
         /* On small screens, set height to 'auto' for sidenav and grid */
         @media screen and (max-width: 767px) {
             .sidenav {
@@ -64,24 +63,29 @@
             </button>
             {# carrega diretório da imagem #}
             {% load static %}
-            <a class="navbar-brand"><img src="{% static '/img/logo.png' %}" class="img-rounded" alt="" width="45"
-                                         height="30"></a>
+            <a class="navbar-brand"><img src="{% static '/img/logo.png' %}" class="img-rounded" alt=""
+                                         height="100%"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li{% block class_home %}{% endblock %}><a href="{% url 'supermarket.home' %}"><span class="glyphicon glyphicon-home"></span>
+                <li{% block class_home %}{% endblock %}><a href="{% url 'supermarket.home' %}"><span
+                        class="glyphicon glyphicon-home"></span>
                     Home</a></li>
-                <li{% block class_promocoes %}{% endblock %}><a href="{% url 'supermarket.promocoes' %}"><span class="glyphicon glyphicon-shopping-cart"></span>
+                <li{% block class_promocoes %}{% endblock %}><a href="{% url 'supermarket.promocoes' %}"><span
+                        class="glyphicon glyphicon-shopping-cart"></span>
                     Promoções</a></li>
-                <li {% block class_sobre %}{% endblock %}><a href="{% url 'supermarket.sobre' %}"><span class="glyphicon glyphicon-question-sign"></span>
+                <li {% block class_sobre %}{% endblock %}><a href="{% url 'supermarket.sobre' %}"><span
+                        class="glyphicon glyphicon-question-sign"></span>
                     Sobre</a></li>
-                <li{% block class_contato %}{% endblock %}><a href="{% url 'supermarket.contato' %}"><span class="glyphicon glyphicon-envelope"></span> Contato</a>
+                <li{% block class_contato %}{% endblock %}><a href="{% url 'supermarket.contato' %}"><span
+                        class="glyphicon glyphicon-envelope"></span> Contato</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'admin:login' %}" target="_blank"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="{% url 'admin:login' %}" target="_blank"><span class="glyphicon glyphicon-log-in"></span>
+                    Login</a></li>
             </ul>
-            \
+
         </div>
     </div>
 </nav>
@@ -112,18 +116,18 @@
             {% block principal %} {% endblock %}
 
         </div>
-{#        <div class="col-sm-2" align="left">#}
-{#        <br>#}
-{#            {% block menu_lateral_direito %}{% endblock %}#}
-{##}
-{#        </div>#}
+        {#        <div class="col-sm-2" align="left">#}
+        {#        <br>#}
+        {#            {% block menu_lateral_direito %}{% endblock %}#}
+        {##}
+        {#        </div>#}
     </div>
 </div>
 
 <footer>
     Instituto Federal de Educação, Ciência e Tecnologia de Rondônia – Câmpus Cacoal<br>
-        Rodovia BR 364, KM 228, Lote 2-A, Zona Rural, Caixa Postal 146 - Cacoal/RO<br>
-        Telefone: (69) 3443-2445 E-mail: campuscacoal@ifro.edu.br / Site: www.ifro.edu.br
+    Rodovia BR 364, KM 228, Lote 2-A, Zona Rural, Caixa Postal 146 - Cacoal/RO<br>
+    Telefone: (69) 3443-2445 E-mail: campuscacoal@ifro.edu.br / Site: www.ifro.edu.br
 </footer>
 
 </body>
