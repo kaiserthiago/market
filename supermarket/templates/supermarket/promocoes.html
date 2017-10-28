@@ -234,6 +234,7 @@
         <h2 class="page-header">Lista de Promoções</h2>
         <p>As promoções estão organizadas por categoria. Clique no nome de cada categoria para ver os produtos que estão
             em promoção.Somente serão visíveis categorias que possuem produtos com promoções vigentes.</p>
+
         {#        <p>Filtre as promoções pelo produto, marca, estabelecimento ou validade da promoção.</p>#}
         {#        <div class="form-group">#}
         {#            <input id="myInput" type="text" class="form-control" placeholder="Busca de produtos..." autofocus/>#}
@@ -259,7 +260,7 @@
                 <li class="active"><a data-toggle="tab" href="#home">Todas</a></li>
                 {% for categoria in todas_categorias %}
                     <li><a data-toggle="tab"
-                           href="#{{ categoria.produto.categoria.id }}">{{ categoria.produto.categoria.descricao }}</a>
+                           href="#{{ categoria.produto__categoria }}">{{ categoria.produto__categoria__descricao }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -301,7 +302,7 @@
                 </div>
 
                 {% for categoria in todas_categorias %}
-                    <div id="{{ categoria.produto.categoria.id }}" class="tab-pane fade">
+                    <div id="{{ categoria.produto__categoria }}" class="tab-pane fade">
                         <table class="table table-responsive table-striped">
                             <thead>
                             <tr>
@@ -313,7 +314,7 @@
                             </tr>
                             </thead>
                             {% for produto in todos_produtos %}
-                                {% if produto.produto.categoria.id == categoria.produto.categoria.id %}
+                                {% if produto.produto.categoria.id == categoria.produto__categoria %}
                                     <tbody id="myTable">
                                     <tr class='clickable-row'
                                         data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">
@@ -328,10 +329,6 @@
                                         <td style="vertical-align: middle">{{ produto.data_fim }}</td>
                                     </tr>
                                 {% endif %}
-                            {% empty %}
-                                <tr>
-                                    <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
-                                </tr>
                             {% endfor %}
                             </tbody>
                         </table>
