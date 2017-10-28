@@ -232,11 +232,11 @@
 
     <div class="container-fluid">
         <h2 class="page-header">Lista de Promoções</h2>
+        <p>As promoções estão organizadas por categoria. Clique no nome de cada categoria para ver os produtos que estão
+            em promoção.Somente serão visíveis categorias que possuem produtos com promoções vigentes.</p>
         {#        <p>Filtre as promoções pelo produto, marca, estabelecimento ou validade da promoção.</p>#}
-        {##}
         {#        <div class="form-group">#}
         {#            <input id="myInput" type="text" class="form-control" placeholder="Busca de produtos..." autofocus/>#}
-        {#                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>#}
         {#        </div>#}
 
 
@@ -258,7 +258,9 @@
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#home">Todas</a></li>
                 {% for categoria in todas_categorias %}
-                    <li><a data-toggle="tab" href="#{{ categoria.id }}">{{ categoria.descricao }}</a></li>
+                    <li><a data-toggle="tab"
+                           href="#{{ categoria.produto.categoria.id }}">{{ categoria.produto.categoria.descricao }}</a>
+                    </li>
                 {% endfor %}
             </ul>
             <div class="tab-content">
@@ -299,7 +301,7 @@
                 </div>
 
                 {% for categoria in todas_categorias %}
-                    <div id="{{ categoria.id }}" class="tab-pane fade">
+                    <div id="{{ categoria.produto.categoria.id }}" class="tab-pane fade">
                         <table class="table table-responsive table-striped">
                             <thead>
                             <tr>
@@ -311,7 +313,7 @@
                             </tr>
                             </thead>
                             {% for produto in todos_produtos %}
-                                {% if produto.produto.categoria.id == categoria.id %}
+                                {% if produto.produto.categoria.id == categoria.produto.categoria.id %}
                                     <tbody id="myTable">
                                     <tr class='clickable-row'
                                         data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">
