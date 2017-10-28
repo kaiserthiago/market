@@ -11,39 +11,39 @@
 {% endblock %}
 
 {% block principal %}
-        <h2 class="page-header">Entre em contato conosco</h2>
-        <div class="row">
-            <div class="col-sm-5">
-                <p><span class="glyphicon glyphicon-map-marker"></span> Cacoal/RO</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> <a
-                        href="mailto:thiago.kaiser@ifro.edu.br?Subject=Contato SuperMarket" target="_top">thiago.kaiser@ifro.edu.br</a>
-                </p>
-                <p><span class="glyphicon glyphicon-envelope"></span> <a
-                        href="mailto:juliano@ifro.edu.br?Subject=Contato SuperMarket"
-                        target="_top">juliano@ifro.edu.br</a>
-                </p>
-                <p><span class="glyphicon glyphicon-envelope"></span> <a
-                        href="mailto:saiane.souza@ifro.edu.br?Subject=Contato SuperMarket" target="_top">saiane.souza@ifro.edu.br</a>
-                </p>
+    <h2 class="page-header">Entre em contato conosco</h2>
+    <div class="row">
+        <div class="col-sm-5">
+            <p><span class="glyphicon glyphicon-map-marker"></span> Cacoal/RO</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> <a
+                    href="mailto:thiago.kaiser@ifro.edu.br?Subject=Contato SuperMarket" target="_top">thiago.kaiser@ifro.edu.br</a>
+            </p>
+            <p><span class="glyphicon glyphicon-envelope"></span> <a
+                    href="mailto:juliano@ifro.edu.br?Subject=Contato SuperMarket"
+                    target="_top">juliano@ifro.edu.br</a>
+            </p>
+            <p><span class="glyphicon glyphicon-envelope"></span> <a
+                    href="mailto:saiane.souza@ifro.edu.br?Subject=Contato SuperMarket" target="_top">saiane.souza@ifro.edu.br</a>
+            </p>
+        </div>
+        <div class="col-md-7">
+            <div id="googleMap" style="width:100%;height:400px;">
+
             </div>
-{#            <div class="col-sm-7 slideanim">#}
-{#                <div class="row">#}
-{#                    <div class="col-sm-6 form-group">#}
-{#                        <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>#}
-{#                    </div>#}
-{#                    <div class="col-sm-6 form-group">#}
-{#                        <input class="form-control" id="email" name="email" placeholder="E-mail" type="email" required>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <textarea class="form-control" id="comments" name="comments" placeholder="Comentário"#}
-{#                          rows="5"></textarea><br>#}
-{#                <div class="row">#}
-{#                    <div class="col-sm-12 form-group">#}
-{#                        <button class="btn btn-default pull-right" type="submit">Enviar</button>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
+        </div>
     </div>
 
 
+
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(-11.480313, -61.380466),
+                zoom: 15,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQMyUYmlWGz-CA6rnjm-QorQmB7qgK_iY&callback=myMap"></script>
 {% endblock %}
