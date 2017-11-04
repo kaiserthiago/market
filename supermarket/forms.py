@@ -8,7 +8,7 @@ class FormPromocao(ModelForm):
 
         for field in iter(self.fields):
             self.fields[field].widget.attrs.update({
-                'class':'form-control'
+                'class': 'form-control'
             })
 
     class Meta:
@@ -22,7 +22,7 @@ class FormProduto(ModelForm):
 
         for field in iter(self.fields):
             self.fields[field].widget.attrs.update({
-                'class':'form-control'
+                'class': 'form-control'
             })
 
     class Meta:
