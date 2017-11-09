@@ -18,5 +18,4 @@ urlpatterns=[
     url(r'^sobre$', views.sobre, name='supermarket.sobre'),
     url(r'^contato$', views.contato, name='supermarket.contato'),
     url(r'^teste2$', views.teste2, name='supermarket.teste2'),
-    url(r'^base$', views.base, name='supermarket.base'),
 ]
