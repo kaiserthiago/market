@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
 <head>
     {% block head %} {% endblock %}
@@ -6,8 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    {% load static %}
-
     <link rel="stylesheet" href="{% static '/css/supermarket.css' %}">
 
     {% block link_css %} {% endblock %}
@@ -30,7 +29,8 @@
                 <span class="icon-bar"></span>
             </button>
             {% load static %}
-            <a class="navbar-brand"><img src="{% static '/img/logo.png' %}" style="border-radius: 10%" height="160%"></a>
+            <a class="navbar-brand"><img src="{% static '/img/logo.png' %}" style="border-radius: 10%"
+                                         height="160%"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -56,7 +56,7 @@
     </div>
 </nav>
 
-<div class="container-fluid" style="margin-top:50px">
+<div class="container-fluid" style="margin-top:30px">
     <div class="row">
         <div class="col-md-12">
             {% block principal %} {% endblock %}
@@ -65,7 +65,7 @@
 </div>
 
 <footer>
-    IFRO - Instituto Federal de Educação, Ciência e Tecnologia de Rondônia
+            IFRO - Instituto Federal de Educação, Ciência e Tecnologia de Rondônia
 </footer>
 
 </body>

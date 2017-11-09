@@ -87,10 +87,6 @@ def teste2(request):
     return render(request, 'supermarket/teste2.html', context)
 
 
-def base(request):
-    return render(request, 'supermarket/base.html', {})
-
-
 def home(request):
     return render(request, 'supermarket/home.html', {})
 
@@ -116,7 +112,8 @@ def produtos(request):
 
 
 def promocoes(request):
-    todas_categorias = Promocao.objects.filter(data_fim__gte=date.today()).order_by('produto__categoria__descricao').values('produto__categoria', 'produto__categoria__descricao').distinct()
+    todas_categorias = Promocao.objects.filter(data_fim__gte=date.today()).order_by(
+        'produto__categoria__descricao').values('produto__categoria', 'produto__categoria__descricao').distinct()
     todos_produtos = Promocao.objects.filter(data_fim__gte=date.today()).order_by(
         'data_fim', 'produto__descricao', 'valor', 'cliente__nome_fantasia')
     clientes = Cliente.objects.all()
