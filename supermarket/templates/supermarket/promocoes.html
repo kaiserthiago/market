@@ -79,19 +79,16 @@
         <input id="myInput" type="text" class="form-control" placeholder="Busca de produtos..." autofocus/>
     </div>
 
-    <table class="table table-responsive table-striped">
+    <table class="table table-striped">
         <thead>
-        <tr>
-            <th></th>
-            <th>Descrição</th>
-            <th>Estabelecimento</th>
-            <th>Valor</th>
-            <th>Válido até</th>
-        </tr>
+        <th colspan="2">Descrição</th>
+        <th>Estabelecimento</th>
+        <th>Valor</th>
+        <th>Válido até</th>
         </thead>
+        <tbody id="myTable">
         {% for produto in todos_produtos %}
 
-            <tbody id="myTable">
             <tr class='clickable-row'
                 data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">
                 <td style="padding: 5px" style="vertical-align: middle">
