@@ -1,23 +1,9 @@
-{% extends "supermarket/layout.html" %}
-
+{% extends "layout.html" %}
 {% block class_home %} class="active" {% endblock %}
-
-{% block menu_lateral_esquerdo %}
-
-{% endblock %}
-
-{% block menu_lateral_direito %}
-
-{% endblock %}
+{% load static %}
 
 {% block principal %}
-    <div class="row">
-        <div class="col-sm-12">
-            <h2 class="page-header">SuperMarket</h2>
-            <p>Uma nova experiência em pesquisa de produtos de supermercados.</p>
-        </div>
-        {% load static %}
-        <img class="img-responsive" src=" {% static '/img/logo_top.png' %}" alt="SuperMarket">
-    </div>
-
+    <h2 class="page-header">SuperMarket</h2>
+    <p>Uma nova experiência em pesquisa de produtos de supermercados.</p>
+    <img class="img-responsive" src=" {% static '/img/logo_top.png' %}" alt="SuperMarket">
 {% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}Registro de usuário - SuperMarket{% endblock %}
+
+{% block principal %}
+    <h2 class="page-header">Cadastre-se</h2>
+    <form method="post" action="{% url 'login_register' %}" class="form-horizontal">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" class="btn btn-primary" value="Cadastrar">
+    </form>
+{% endblock %}

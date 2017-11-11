@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login - SuperMarket{% endblock %}
+
+{% block principal %}
+    <h2 class="page-header">Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input class="form-control" placeholder="Usuário" input type="text" name="username" autofocus
+               maxlength="254" required id="id_username"/><br>
+        <input class="form-control" placeholder="Senha" type="password" name="password" required
+               id="id_password"/>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Login">
+    </form>
+{% endblock %}

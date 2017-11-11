@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    {% block head %} {% endblock %}
+    <title>{% block titulo %}SuperMarket{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css"/>
+    <link rel="stylesheet" href="{% static '/css/supermarket.css' %}">
+
+    {% block link_css %} {% endblock %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
+    <style>
+        {% block style %} {% endblock %}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {% load static %}
+            <a class="navbar-brand navbar-brand-market"><img src="{% static '/img/logo.png' %}"
+                                                             style="height: 100%; border-radius: 12%"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li{% block class_home %}{% endblock %}><a href="{% url 'supermarket.home' %}"><i
+                        class="fa fa-home" style="font-size:16px"></i>
+                    Home</a></li>
+                <li{% block class_promocoes %}{% endblock %}><a href="{% url 'supermarket.promocoes' %}"><i
+                        class="fa fa-question-shopping-cart" style="font-size:16px"></i>
+                    Promoções</a></li>
+                <li {% block class_sobre %}{% endblock %}><a href="{% url 'supermarket.sobre' %}"><i
+                        class="fa fa-question-circle-o" style="font-size:16px"></i>
+                    Sobre</a></li>
+                <li{% block class_contato %}{% endblock %}><a href="{% url 'supermarket.contato' %}"><i
+                        class="fa fa-envelope-o" style="font-size:16px"></i> Contato</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if request.user.is_authenticated %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false"><i
+                                class="fa fa-user-o" style="font-size:16px;"></i><span> {{ request.user.username }}</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"><i
+                                        class="fa fa-pencil-square-o" style="font-size:16px"></i> Nova promoção</a>
+                            </li>
+                            <li>
+                                <a href="#"><i
+                                    class="fa fa-pencil-square" style="font-size:16px"></i> Minhas promoções</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="{% url 'admin:login' %}" target="_blank"><i
+                                    class="fa fa-tasks" style="font-size:16px"></i> Admin</a>
+                            </li>
+                            <li>
+                                <a href="#"><i
+                                    class="fa fa-user-circle-o" style="font-size:16px"></i> Meus dados</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="{% url 'logout' %}"><i
+                                        class="fa fa-power-off" style="font-size:16px;"></i> Sair</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                {% else %}
+                    <li><a href="{% url 'login' %}"><i
+                            class="fa fa-lock" style="font-size:16px;"></i> Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    {% block principal %} {% endblock %}
+</div>
+
+<footer>
+    <p>Copyright © - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

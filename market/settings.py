@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'algoliasearch_django',
     'supermarket',
+    'login',
 
 ]
 
@@ -136,3 +137,6 @@ ALGOLIA = {
     'APPLICATION_ID': 'SCWGZ4PA3L',
     'API_KEY': 'd4ad4a24decb55d465b9d9c47118c35a',
 }
+
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login'

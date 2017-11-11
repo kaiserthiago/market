@@ -23,6 +23,7 @@ from market import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name='market.admin'),
     url(r'^', include('supermarket.urls')),
+    url(r'^', include('login.urls')),
 ]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 admin.site.site_header = 'SuperMarket - Admin'
