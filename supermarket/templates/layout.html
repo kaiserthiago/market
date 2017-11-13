@@ -57,23 +57,23 @@
                            aria-expanded="false"><i
                                 class="fa fa-user-o" style="font-size:16px;"></i><span> {{ request.user.username }}</span></a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a href="#"><i
-                                        class="fa fa-pencil-square-o" style="font-size:16px"></i> Nova promoção</a>
-                            </li>
-                            <li>
-                                <a href="#"><i
-                                    class="fa fa-pencil-square" style="font-size:16px"></i> Minhas promoções</a>
-                            </li>
-                            <li class="divider"></li>
+{#                            <li>#}
+{#                                <a href="#"><i#}
+{#                                        class="fa fa-pencil-square-o" style="font-size:16px"></i> Nova promoção</a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#"><i#}
+{#                                    class="fa fa-pencil-square" style="font-size:16px"></i> Minhas promoções</a>#}
+{#                            </li>#}
+{#                            <li class="divider"></li>#}
                             <li>
                                 <a href="{% url 'admin:login' %}" target="_blank"><i
                                     class="fa fa-tasks" style="font-size:16px"></i> Admin</a>
                             </li>
-                            <li>
-                                <a href="#"><i
-                                    class="fa fa-user-circle-o" style="font-size:16px"></i> Meus dados</a>
-                            </li>
+{#                            <li>#}
+{#                                <a href="#"><i#}
+{#                                    class="fa fa-user-circle-o" style="font-size:16px"></i> Meus dados</a>#}
+{#                            </li>#}
                             <li class="divider"></li>
                             <li>
                                 <a href="{% url 'logout' %}"><i
