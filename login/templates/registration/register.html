@@ -4,7 +4,7 @@
 
 {% block principal %}
     <section class="section-content">
-        <div class="container-login">
+        <div class="container">
             <h2 class="page-header">Cadastre-se</h2>
             <form method="post" action="{% url 'login_register' %}" class="form-horizontal">
                 {% csrf_token %}
