@@ -72,21 +72,6 @@ def promocao_por_produto(request, produto_id):
 #     return render(request, 'supermarket/promocoes_por_produto.html', context)
 
 
-def teste2(request):
-    todas_categorias = Categoria.objects.all()
-    todos_produtos = Promocao.objects.filter(data_fim__gte=date.today()).order_by(
-        'data_fim', 'produto__descricao', 'valor', 'cliente__nome_fantasia')
-    clientes = Cliente.objects.all()
-
-    context = {
-        'todas_categorias': todas_categorias,
-        'todos_produtos': todos_produtos,
-        'clientes': clientes,
-    }
-
-    return render(request, 'supermarket/teste2.html', context)
-
-
 def home(request):
     return render(request, 'supermarket/home.html', {})
 

@@ -1,234 +1,238 @@
-{% extends "supermarket/../layout.html" %}
+{% extends "layout.html" %}
 {% block class_promocoes %} class="active" {% endblock %}
-{% block titulo %}Promoções - SuperMarket{% endblock %}
+{% block titulo %}Promoções - Mercado com desconto{% endblock %}
 
 
 {% block principal %}
-    {#    <section xmlns="http://www.w3.org/1999/html">#}
-    {#        <br>#}
-    {#        <!-- HTML Markup -->#}
-    {#        <div class="aa-input-container" id="aa-input-container">#}
-    {#            <input type="search" id="search" class="aa-input-search" placeholder="Busca por produtos..."#}
-    {#                   name="search" autocomplete="off" autofocus/>#}
-    {#            <svg class="aa-input-icon" viewBox="654 -372 1664 1664">#}
-    {#                <path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z"/>#}
-    {#            </svg>#}
-    {#        </div>#}
-    {#        <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->#}
-    {#        <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>#}
-    {#        <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>#}
-    {#    <script src="app.js"></script>#}
-    {##}
-    {#        <script>#}
-    {#            var algolia = algoliasearch("SCWGZ4PA3L", "b8015d39267687e1c6f000ff2f94b6b6");#}
-    {#            var post_index = algolia.initIndex("lista_produto");#}
-    {##}
-    {#            autocomplete("#search", {hint: false}, [#}
-    {#                {#}
-    {#                    source: autocomplete.sources.hits(post_index, {hitsPerPage: 5}),#}
-    {#                    displayKey: 'descricao',#}
-    {#                    mestrado: {#}
-    {#                        suggestion: function (suggestion) {#}
-    {#                            return '<span>' +#}
-    {#                                suggestion._highlightResult.descricao.value + '</span><span>' +#}
-    {#                                suggestion._highlightResult.marca.value + '</span>';#}
-    {#                        }#}
-    {#                    }#}
-    {#                }#}
-    {#            ]).on('autocomplete:selected', function (event, suggestion, dataset) {#}
-    {#                window.location.replace('/supermarket/promocao_por_produto/' + suggestion.id);#}
-    {##}
-    {#            });#}
-    {#        </script>#}
-    {#        <br><br>#}
-    {#        <table class="table table-responsive table-striped">#}
-    {#            <thead>#}
-    {#            <tr>#}
-    {#                <th></th>#}
-    {#                <th>Descrição</th>#}
-    {#                <th>Estabelecimento</th>#}
-    {#                <th>Valor</th>#}
-    {#                <th>Válido até</th>#}
-    {#            </tr>#}
-    {#            </thead>#}
-    {#            <tbody>#}
-    {#            {% for produto in todos_produtos %}#}
-    {#                <tr>#}
-    {#                    <td>#}
-    {#                        <img src="{{ produto.produto.imagem.url }}" class="img-responsive" width="100" height="80"></td>#}
-    {#                    <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>#}
-    {#                        {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>#}
-    {#                    <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>#}
-    {#                    <td style="vertical-align: middle">R$ {{ produto.valor }}</td>#}
-    {#                    <td style="vertical-align: middle">{{ produto.data_fim }}</td>#}
-    {#                </tr>#}
-    {#            {% empty %}#}
-    {#                <h2>Sem promoções no momento!</h2>#}
-    {#            {% endfor %}#}
-    {#            </tbody>#}
-    {#        </table>#}
-    {#    </section>#}
+    <section class="section-content">
+        <div class="container">
+            {#    <section xmlns="http://www.w3.org/1999/html">#}
+            {#        <br>#}
+            {#        <!-- HTML Markup -->#}
+            {#        <div class="aa-input-container" id="aa-input-container">#}
+            {#            <input type="search" id="search" class="aa-input-search" placeholder="Busca por produtos..."#}
+            {#                   name="search" autocomplete="off" autofocus/>#}
+            {#            <svg class="aa-input-icon" viewBox="654 -372 1664 1664">#}
+            {#                <path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z"/>#}
+            {#            </svg>#}
+            {#        </div>#}
+            {#        <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->#}
+            {#        <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>#}
+            {#        <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>#}
+            {#    <script src="app.js"></script>#}
+            {##}
+            {#        <script>#}
+            {#            var algolia = algoliasearch("SCWGZ4PA3L", "b8015d39267687e1c6f000ff2f94b6b6");#}
+            {#            var post_index = algolia.initIndex("lista_produto");#}
+            {##}
+            {#            autocomplete("#search", {hint: false}, [#}
+            {#                {#}
+            {#                    source: autocomplete.sources.hits(post_index, {hitsPerPage: 5}),#}
+            {#                    displayKey: 'descricao',#}
+            {#                    mestrado: {#}
+            {#                        suggestion: function (suggestion) {#}
+            {#                            return '<span>' +#}
+            {#                                suggestion._highlightResult.descricao.value + '</span><span>' +#}
+            {#                                suggestion._highlightResult.marca.value + '</span>';#}
+            {#                        }#}
+            {#                    }#}
+            {#                }#}
+            {#            ]).on('autocomplete:selected', function (event, suggestion, dataset) {#}
+            {#                window.location.replace('/supermarket/promocao_por_produto/' + suggestion.id);#}
+            {##}
+            {#            });#}
+            {#        </script>#}
+            {#        <br><br>#}
+            {#        <table class="table table-responsive table-striped">#}
+            {#            <thead>#}
+            {#            <tr>#}
+            {#                <th></th>#}
+            {#                <th>Descrição</th>#}
+            {#                <th>Estabelecimento</th>#}
+            {#                <th>Valor</th>#}
+            {#                <th>Válido até</th>#}
+            {#            </tr>#}
+            {#            </thead>#}
+            {#            <tbody>#}
+            {#            {% for produto in todos_produtos %}#}
+            {#                <tr>#}
+            {#                    <td>#}
+            {#                        <img src="{{ produto.produto.imagem.url }}" class="img-responsive" width="100" height="80"></td>#}
+            {#                    <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>#}
+            {#                        {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>#}
+            {#                    <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>#}
+            {#                    <td style="vertical-align: middle">R$ {{ produto.valor }}</td>#}
+            {#                    <td style="vertical-align: middle">{{ produto.data_fim }}</td>#}
+            {#                </tr>#}
+            {#            {% empty %}#}
+            {#                <h2>Sem promoções no momento!</h2>#}
+            {#            {% endfor %}#}
+            {#            </tbody>#}
+            {#        </table>#}
+            {#    </section>#}
 
-    {#    <div class="container-fluid">#}
-    <h2 class="page-header">Lista de Promoções</h2>
-    {#        <p>As promoções estão organizadas por categoria. Clique no nome de cada categoria para ver os produtos que estão#}
-    {#            em promoção.Somente serão visíveis categorias que possuem produtos com promoções vigentes.</p>#}
+            {#    <div class="container-fluid">#}
+            <h2 class="page-header">Lista de Promoções</h2>
+            {#        <p>As promoções estão organizadas por categoria. Clique no nome de cada categoria para ver os produtos que estão#}
+            {#            em promoção.Somente serão visíveis categorias que possuem produtos com promoções vigentes.</p>#}
 
-    <p>Filtre as promoções pelo produto, marca, estabelecimento ou validade da promoção.</p>
-    <div class="form-group">
-        <input id="myInput" type="text" class="form-control" placeholder="Busca de produtos..." autofocus/>
-    </div>
+            <p>Filtre as promoções pelo produto, marca, estabelecimento ou validade da promoção.</p>
+            <div class="form-group">
+                <input id="myInput" type="text" class="form-control" placeholder="Busca de produtos..." autofocus/>
+            </div>
 
-    <table class="table table-striped">
-        <thead>
-        <th colspan="2">Descrição</th>
-        <th>Estabelecimento</th>
-        <th>Valor</th>
-        <th>Válido até</th>
-        </thead>
-        <tbody id="myTable">
-        {% for produto in todos_produtos %}
+            <table class="table table-striped">
+                <thead>
+                <th colspan="2">Descrição</th>
+                <th>Estabelecimento</th>
+                <th>Valor</th>
+                <th>Válido até</th>
+                </thead>
+                <tbody id="myTable">
+                {% for produto in todos_produtos %}
 
-            <tr class='clickable-row'
-                data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">
-                <td style="padding: 5px" style="vertical-align: middle">
-                    <img src="{{ produto.produto.imagem.url }}" class="img-responsive"
-                         width="75">
-                </td>
-                <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>
-                    {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>
-                <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>
-                <td style="vertical-align: middle">R$ {{ produto.valor }}</td>
-                <td style="vertical-align: middle">{{ produto.data_fim }}</td>
-            </tr>
-        {% empty %}
-            <tr>
-                <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    {#    <div class="form-group">#}
-    {#        <input class="form-control" type="search" id="myInput" placeholder="Busca por produtos..."#}
-    {#               autocomplete="off" autofocus/>#}
-    {#    </div>#}
-    {#        <div>#}
-    {#                                {% for categoria in todas_categorias %}#}
-    {#                                    <h2>{{ categoria.descricao }}</h2>#}
-    {#                                    {% for produtos in todos_produtos %}#}
-    {#                                        {% if produtos.produto.categoria.id == categoria.id %}#}
-    {#                                            {{ produtos.produto.descricao }}<br>#}
-    {#                                        {% endif %}#}
-    {#                                    {% endfor %}#}
-    {#                                {% endfor %}#}
+                    <tr class='clickable-row'
+                        data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">
+                        <td style="padding: 5px" style="vertical-align: middle">
+                            <img src="{{ produto.produto.imagem.url }}" class="img-responsive"
+                                 width="75">
+                        </td>
+                        <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>
+                            {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>
+                        <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>
+                        <td style="vertical-align: middle">R$ {{ produto.valor }}</td>
+                        <td style="vertical-align: middle">{{ produto.data_fim }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {#    <div class="form-group">#}
+            {#        <input class="form-control" type="search" id="myInput" placeholder="Busca por produtos..."#}
+            {#               autocomplete="off" autofocus/>#}
+            {#    </div>#}
+            {#        <div>#}
+            {#                                {% for categoria in todas_categorias %}#}
+            {#                                    <h2>{{ categoria.descricao }}</h2>#}
+            {#                                    {% for produtos in todos_produtos %}#}
+            {#                                        {% if produtos.produto.categoria.id == categoria.id %}#}
+            {#                                            {{ produtos.produto.descricao }}<br>#}
+            {#                                        {% endif %}#}
+            {#                                    {% endfor %}#}
+            {#                                {% endfor %}#}
 
-    {#        <div class="row">#}
-    {#            <ul class="nav nav-tabs">#}
-    {#                <li class="active"><a data-toggle="tab" href="#home">Todas</a></li>#}
-    {#                {% for categoria in todas_categorias %}#}
-    {#                    <li><a data-toggle="tab"#}
-    {#                           href="#{{ categoria.produto__categoria }}">{{ categoria.produto__categoria__descricao }}</a>#}
-    {#                    </li>#}
-    {#                {% endfor %}#}
-    {#            </ul>#}
-    {#            <div class="tab-content">#}
-    {##}
-    {#                <div id="home" class="tab-pane fade in active">#}
-    {#                    <table class="table table-responsive table-striped">#}
-    {#                        <thead>#}
-    {#                        <tr>#}
-    {#                            <th></th>#}
-    {#                            <th>Descrição</th>#}
-    {#                            <th>Estabelecimento</th>#}
-    {#                            <th>Valor</th>#}
-    {#                            <th>Válido até</th>#}
-    {#                        </tr>#}
-    {#                        </thead>#}
-    {#                        {% for produto in todos_produtos %}#}
-    {##}
-    {#                            <tbody id="myTable">#}
-    {#                            <tr class='clickable-row'#}
-    {#                                data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">#}
-    {#                                <td style="padding: 5px" style="vertical-align: middle">#}
-    {#                                    <img src="{{ produto.produto.imagem.url }}" class="img-responsive"#}
-    {#                                         width="75">#}
-    {#                                </td>#}
-    {#                                <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>#}
-    {#                                    {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>#}
-    {#                                <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>#}
-    {#                                <td style="vertical-align: middle">R$ {{ produto.valor }}</td>#}
-    {#                                <td style="vertical-align: middle">{{ produto.data_fim }}</td>#}
-    {#                            </tr>#}
-    {#                        {% empty %}#}
-    {#                            <tr>#}
-    {#                                <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>#}
-    {#                            </tr>#}
-    {#                        {% endfor %}#}
-    {#                        </tbody>#}
-    {#                    </table>#}
-    {#                </div>#}
-    {##}
-    {#                {% for categoria in todas_categorias %}#}
-    {#                    <div id="{{ categoria.produto__categoria }}" class="tab-pane fade">#}
-    {#                        <table class="table table-responsive table-striped">#}
-    {#                            <thead>#}
-    {#                            <tr>#}
-    {#                                <th></th>#}
-    {#                                <th>Descrição</th>#}
-    {#                                <th>Estabelecimento</th>#}
-    {#                                <th>Valor</th>#}
-    {#                                <th>Válido até</th>#}
-    {#                            </tr>#}
-    {#                            </thead>#}
-    {#                            {% for produto in todos_produtos %}#}
-    {#                                {% if produto.produto.categoria.id == categoria.produto__categoria %}#}
-    {#                                    <tbody id="myTable">#}
-    {#                                    <tr class='clickable-row'#}
-    {#                                        data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">#}
-    {#                                        <td style="padding: 5px" style="vertical-align: middle">#}
-    {#                                            <img src="{{ produto.produto.imagem.url }}" class="img-responsive"#}
-    {#                                                 width="75">#}
-    {#                                        </td>#}
-    {#                                        <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>#}
-    {#                                            {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>#}
-    {#                                        <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>#}
-    {#                                        <td style="vertical-align: middle">R$ {{ produto.valor }}</td>#}
-    {#                                        <td style="vertical-align: middle">{{ produto.data_fim }}</td>#}
-    {#                                    </tr>#}
-    {#                                {% endif %}#}
-    {#                            {% endfor %}#}
-    {#                            </tbody>#}
-    {#                        </table>#}
-    {#                    </div>#}
-    {#                {% endfor %}#}
-    {##}
-    {#            </div>#}
-    {#        </div>#}
+            {#        <div class="row">#}
+            {#            <ul class="nav nav-tabs">#}
+            {#                <li class="active"><a data-toggle="tab" href="#home">Todas</a></li>#}
+            {#                {% for categoria in todas_categorias %}#}
+            {#                    <li><a data-toggle="tab"#}
+            {#                           href="#{{ categoria.produto__categoria }}">{{ categoria.produto__categoria__descricao }}</a>#}
+            {#                    </li>#}
+            {#                {% endfor %}#}
+            {#            </ul>#}
+            {#            <div class="tab-content">#}
+            {##}
+            {#                <div id="home" class="tab-pane fade in active">#}
+            {#                    <table class="table table-responsive table-striped">#}
+            {#                        <thead>#}
+            {#                        <tr>#}
+            {#                            <th></th>#}
+            {#                            <th>Descrição</th>#}
+            {#                            <th>Estabelecimento</th>#}
+            {#                            <th>Valor</th>#}
+            {#                            <th>Válido até</th>#}
+            {#                        </tr>#}
+            {#                        </thead>#}
+            {#                        {% for produto in todos_produtos %}#}
+            {##}
+            {#                            <tbody id="myTable">#}
+            {#                            <tr class='clickable-row'#}
+            {#                                data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">#}
+            {#                                <td style="padding: 5px" style="vertical-align: middle">#}
+            {#                                    <img src="{{ produto.produto.imagem.url }}" class="img-responsive"#}
+            {#                                         width="75">#}
+            {#                                </td>#}
+            {#                                <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>#}
+            {#                                    {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>#}
+            {#                                <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>#}
+            {#                                <td style="vertical-align: middle">R$ {{ produto.valor }}</td>#}
+            {#                                <td style="vertical-align: middle">{{ produto.data_fim }}</td>#}
+            {#                            </tr>#}
+            {#                        {% empty %}#}
+            {#                            <tr>#}
+            {#                                <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>#}
+            {#                            </tr>#}
+            {#                        {% endfor %}#}
+            {#                        </tbody>#}
+            {#                    </table>#}
+            {#                </div>#}
+            {##}
+            {#                {% for categoria in todas_categorias %}#}
+            {#                    <div id="{{ categoria.produto__categoria }}" class="tab-pane fade">#}
+            {#                        <table class="table table-responsive table-striped">#}
+            {#                            <thead>#}
+            {#                            <tr>#}
+            {#                                <th></th>#}
+            {#                                <th>Descrição</th>#}
+            {#                                <th>Estabelecimento</th>#}
+            {#                                <th>Valor</th>#}
+            {#                                <th>Válido até</th>#}
+            {#                            </tr>#}
+            {#                            </thead>#}
+            {#                            {% for produto in todos_produtos %}#}
+            {#                                {% if produto.produto.categoria.id == categoria.produto__categoria %}#}
+            {#                                    <tbody id="myTable">#}
+            {#                                    <tr class='clickable-row'#}
+            {#                                        data-href={% url 'supermarket.promocao_por_produto' produto.produto.id %} style="cursor:pointer">#}
+            {#                                        <td style="padding: 5px" style="vertical-align: middle">#}
+            {#                                            <img src="{{ produto.produto.imagem.url }}" class="img-responsive"#}
+            {#                                                 width="75">#}
+            {#                                        </td>#}
+            {#                                        <td style="vertical-align: middle">{{ produto.produto.descricao }}<br>#}
+            {#                                            {{ produto.produto.marca }}<br>{{ produto.produto.unidade_de_medida }}</td>#}
+            {#                                        <td style="vertical-align: middle">{{ produto.cliente.nome_fantasia }}</td>#}
+            {#                                        <td style="vertical-align: middle">R$ {{ produto.valor }}</td>#}
+            {#                                        <td style="vertical-align: middle">{{ produto.data_fim }}</td>#}
+            {#                                    </tr>#}
+            {#                                {% endif %}#}
+            {#                            {% endfor %}#}
+            {#                            </tbody>#}
+            {#                        </table>#}
+            {#                    </div>#}
+            {#                {% endfor %}#}
+            {##}
+            {#            </div>#}
+            {#        </div>#}
 
 
-    {#            {% if todos_produtos.has_other_pages %}#}
-    {#                <ul class="pagination">#}
-    {#                    {% if todos_produtos.has_previous %}#}
-    {#                        <li><a href="?page={{ todos_produtos.previous_page_number }}">&laquo;</a></li>#}
-    {#                    {% else %}#}
-    {#                        <li class="disabled"><span>&laquo;</span></li>#}
-    {#                    {% endif %}#}
-    {#                    {% for i in todos_produtos.paginator.page_range %}#}
-    {#                        {% if todos_produtos.number == i %}#}
-    {#                            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>#}
-    {#                        {% else %}#}
-    {#                            <li><a href="?page={{ i }}">{{ i }}</a></li>#}
-    {#                        {% endif %}#}
-    {#                    {% endfor %}#}
-    {#                    {% if todos_produtos.has_next %}#}
-    {#                        <li><a href="?page={{ todos_produtos.next_page_number }}">&raquo;</a></li>#}
-    {#                    {% else %}#}
-    {#                        <li class="disabled"><span>&raquo;</span></li>#}
-    {#                    {% endif %}#}
-    {#                </ul>#}
-    {#            {% endif %}#}
-    {#    </div>#}
-    {#    </div>#}
+            {#            {% if todos_produtos.has_other_pages %}#}
+            {#                <ul class="pagination">#}
+            {#                    {% if todos_produtos.has_previous %}#}
+            {#                        <li><a href="?page={{ todos_produtos.previous_page_number }}">&laquo;</a></li>#}
+            {#                    {% else %}#}
+            {#                        <li class="disabled"><span>&laquo;</span></li>#}
+            {#                    {% endif %}#}
+            {#                    {% for i in todos_produtos.paginator.page_range %}#}
+            {#                        {% if todos_produtos.number == i %}#}
+            {#                            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>#}
+            {#                        {% else %}#}
+            {#                            <li><a href="?page={{ i }}">{{ i }}</a></li>#}
+            {#                        {% endif %}#}
+            {#                    {% endfor %}#}
+            {#                    {% if todos_produtos.has_next %}#}
+            {#                        <li><a href="?page={{ todos_produtos.next_page_number }}">&raquo;</a></li>#}
+            {#                    {% else %}#}
+            {#                        <li class="disabled"><span>&raquo;</span></li>#}
+            {#                    {% endif %}#}
+            {#                </ul>#}
+            {#            {% endif %}#}
+            {#    </div>#}
+            {#    </div>#}
+        </div>
+    </section>
     <script>
         $(document).ready(function () {
             $("#myInput").on("keyup", function () {

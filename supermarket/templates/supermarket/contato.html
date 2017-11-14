@@ -1,29 +1,33 @@
 {% extends "layout.html" %}
 {% block class_contato %} class="active" {% endblock %}
-{% block titulo %}Contato - SuperMarket{% endblock %}
+{% block titulo %}Contato - Mercado com desconto{% endblock %}
 
 {% block principal %}
-    <h2 class="page-header">Entre em contato conosco</h2>
-    <div class="row">
-        <div class="col-sm-5">
-            <p><span class="glyphicon glyphicon-map-marker"></span> Cacoal/RO</p>
-            <p><span class="glyphicon glyphicon-envelope"></span> <a
-                    href="mailto:thiago.kaiser@ifro.edu.br?Subject=Contato SuperMarket" target="_top">thiago.kaiser@ifro.edu.br</a>
-            </p>
-            <p><span class="glyphicon glyphicon-envelope"></span> <a
-                    href="mailto:juliano@ifro.edu.br?Subject=Contato SuperMarket"
-                    target="_top">juliano@ifro.edu.br</a>
-            </p>
-            <p><span class="glyphicon glyphicon-envelope"></span> <a
-                    href="mailto:saiane.souza@ifro.edu.br?Subject=Contato SuperMarket" target="_top">saiane.souza@ifro.edu.br</a>
-            </p>
-        </div>
-        <div class="col-md-7">
-            <div id="googleMap" style="width:100%;height:400px;">
+    <section class="section-content">
+        <div class="container">
+            <h2 class="page-header">Entre em contato conosco</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Cacoal/RO</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> <a
+                            href="mailto:thiago.kaiser@ifro.edu.br?Subject=Contato SuperMarket" target="_top">thiago.kaiser@ifro.edu.br</a>
+                    </p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> <a
+                            href="mailto:juliano@ifro.edu.br?Subject=Contato SuperMarket"
+                            target="_top">juliano@ifro.edu.br</a>
+                    </p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> <a
+                            href="mailto:saiane.souza@ifro.edu.br?Subject=Contato SuperMarket" target="_top">saiane.souza@ifro.edu.br</a>
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <div id="googleMap" style="width:100%;height:400px;">
 
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <script>
         function myMap() {
             var mapProp = {
@@ -33,6 +37,5 @@
             var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
         }
     </script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQMyUYmlWGz-CA6rnjm-QorQmB7qgK_iY&callback=myMap"></script>
 {% endblock %}

@@ -4,18 +4,20 @@ from django.contrib.auth.models import User
 
 class RegistrationForm(forms.Form):
     username = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
-        attrs=dict(required=True, max_lenght=30)), label='Usuário', error_messages={
+        attrs={'class': 'form-control', 'required': 'True', 'max_lenght': '30', 'autofocus':'autofocus'}), label='Usuário', error_messages={
         'invalid': 'Usuário pode conter apenas letras e números'
     })
 
     email = forms.EmailField(widget=forms.TextInput(
-        attrs=dict(required=True, max_lenght=30)), label='E-mail')
+        attrs={'class': 'form-control', 'required': 'True', 'max_lenght': '30'}), label='E-mail')
 
     password = forms.CharField(widget=forms.PasswordInput(
-        attrs=dict(required=True, max_lenght=30, render_value=False)), label='Senha')
+        attrs={'class': 'form-control', 'required': 'True', 'max_lenght': '30', 'render_value': 'False'}),
+        label='Senha')
 
     password2 = forms.CharField(widget=forms.PasswordInput(
-        attrs=dict(required=True, max_lenght=30, render_value=False)), label='Repita senha')
+        attrs={'class': 'form-control', 'required': 'True', 'max_lenght': '30', 'render_value': 'False'}),
+        label='Repita senha')
 
     def clean_username(self):
         try:
@@ -31,17 +33,17 @@ class RegistrationForm(forms.Form):
 
         return self.cleaned_data
 
-# class LoginForm(forms.ModelForm):
-#     class Meta:
-#         model = Login
-#         fields = ('first_name', 'last_name')
-#
-#         widgets = {
-#             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-#             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
-#         }
-#
-#         labels = {
-#             'first_name': "Nome",
-#             'last_name': "Sobrenome",
-#         }
+        # class LoginForm(forms.ModelForm):
+        #     class Meta:
+        #         model = Login
+        #         fields = ('first_name', 'last_name')
+        #
+        #         widgets = {
+        #             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+        #             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+        #         }
+        #
+        #         labels = {
+        #             'first_name': "Nome",
+        #             'last_name': "Sobrenome",
+        #         }

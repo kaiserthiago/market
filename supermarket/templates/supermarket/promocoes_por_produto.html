@@ -1,116 +1,87 @@
-{% extends "supermarket/../layout.html" %}
+{% extends "layout.html" %}
 {% block class_promocoes %} class="active" {% endblock %}
-{% block titulo %} SuperMarket - Promoções {% endblock %}
-
-{% block menu_lateral_esquerdo %}
-
-{% endblock %}
-
-{% block menu_lateral_direito %}
-    <div class="panel panel-success">
-        <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>
-        <div class="panel-body">
-            {#            {% for cliente in clientes %}#}
-            {#                <p><a href="{% url 'supermarket.filtro_promocao' cliente.id %}">{{ cliente.nome_fantasia }}</a></p>#}
-            {#            {% endfor %}#}
-            {#            <hr>#}
-            <p><a href="{% url 'supermarket.promocoes' %}">Todas promoções</a></p>
-        </div>
-    </div>
-    {#{% for title_produto in produto_descricao %}#}
-    {#    <div class="panel panel-info">#}
-    {#        <div class="panel-heading"><span class="glyphicon glyphicon-sort"></span> Organizar</div>#}
-    {#        <div class="panel-body">#}
-    {#            <p><a href="#">Maior preço</a></p>#}
-    {#            <p><a href="#">Menor preço</a></p>#}
-    {#        </div>#}
-    {#    </div>#}
-    {#{% endfor %}#}
-    {#    <div class="panel panel-success">#}
-    {#        <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Ações</div>#}
-    {#        <div class="panel-body">#}
-    {#            <p><a href="{% url 'supermarket.nova_promocao' %}">Inserir</a></p>#}
-    {#        </div>#}
-    {#    </div>#}
-
-{% endblock %}
+{% block titulo %}Promoções - Mercado com desconto{% endblock %}
 
 {% block principal %}
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table table-responsive">
-                <tbody>
-                <tr>
-                    {% for title_produto in produto_descricao %}
-                        <td style="vertical-align:middle">
-                            <img class="img-responsive" src="{{ title_produto.imagem.url }}" width="200">
-                        </td>
-                        <td style="vertical-align:middle"><h2>{{ title_produto.descricao }}<br>
-                            {{ title_produto.marca }} -
-                            {{ title_produto.unidade_de_medida }}</h2></td>
-                    {% endfor %}
-                </tr>
-                </tbody>
-            </table>
-            <table class="table table-responsive table-striped">
-                <thead>
-                <tr>
-                    <th>Estabelecimento</th>
-                    <th>Valor</th>
-                    <th>Válido até</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for produto in todos_produtos %}
-                    <tr>
-                        <td>{{ produto.cliente.nome_fantasia }}</td>
-                        <td>R$ {{ produto.valor }}</td>
-                        <td>{{ produto.data_fim }}</td>
-                    </tr>
-                {% empty %}
-                    <tr>
-                        <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <section class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-responsive">
+                        <tbody>
+                        <tr>
+                            {% for title_produto in produto_descricao %}
+                                <td style="vertical-align:middle">
+                                    <img class="img-responsive" src="{{ title_produto.imagem.url }}" width="200">
+                                </td>
+                                <td style="vertical-align:middle"><h2>{{ title_produto.descricao }}<br>
+                                    {{ title_produto.marca }} -
+                                    {{ title_produto.unidade_de_medida }}</h2></td>
+                            {% endfor %}
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-responsive table-striped">
+                        <thead>
+                        <tr>
+                            <th>Estabelecimento</th>
+                            <th>Valor</th>
+                            <th>Válido até</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for produto in todos_produtos %}
+                            <tr>
+                                <td>{{ produto.cliente.nome_fantasia }}</td>
+                                <td>R$ {{ produto.valor }}</td>
+                                <td>{{ produto.data_fim }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="7" class="text-center bg-warning">Sem promoções no momento!</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="page-header">Histórico de preços</h2>
-            <canvas id="productsChart" width="300" height="70"></canvas>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="page-header">Histórico de preços</h2>
+                    <canvas id="productsChart" width="300" height="70"></canvas>
 
-            <script>
-                var ctx = document.getElementById("productsChart");
-                var datas = JSON.parse('{{ datas|safe }}');
-                var precos = JSON.parse('{{ precos|safe }}');
-                var productsChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: datas,
-                        datasets: [{
-                            label: 'Datas',
-                            data: precos,
-                            borderColor: '#3cba9f',
-                            fill: false,
-                        }]
-                    }
-                    ,
-                    options: {
-                        scales: {
-                            yAxes: [{
+                    <script>
+                        var ctx = document.getElementById("productsChart");
+                        var datas = JSON.parse('{{ datas|safe }}');
+                        var precos = JSON.parse('{{ precos|safe }}');
+                        var productsChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: datas,
+                                datasets: [{
+                                    label: 'Datas',
+                                    data: precos,
+                                    borderColor: '#3cba9f',
+                                    fill: false,
+                                }]
+                            }
+                            ,
+                            options: {
+                                scales: {
+                                    yAxes: [{
 
-                                ticks: {
-                                    beginAtZero: true
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
                                 }
-                            }]
-                        }
-                    }
-                });
-            </script>
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 {% endblock %}

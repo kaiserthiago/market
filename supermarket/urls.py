@@ -17,5 +17,4 @@ urlpatterns=[
     # url(r'^promocao_por_produto/order/(?P<ordem>[\d]+/(?P<produto_id>[\d]+)', views.order_promocao_por_produto, name='supermarket.order_promocao_por_produto'),
     url(r'^sobre$', views.sobre, name='supermarket.sobre'),
     url(r'^contato$', views.contato, name='supermarket.contato'),
-    url(r'^teste2$', views.teste2, name='supermarket.teste2'),
 ]

@@ -1,59 +1,31 @@
-{% extends "supermarket/../layout.html" %}
-{% block link_css %}
-{% endblock %}
-
-{% block titulo %}
-    SuperMarket - Produtos
-{% endblock %}
-
-{% block menu_lateral_esquerdo %}
-{% endblock %}
-
-{% block menu_lateral_direito %}
-    <div class="panel panel-info">
-        <div class="panel-heading"><span class="glyphicon glyphicon-filter"></span> Filtrar</div>
-        <div class="panel-body">{% for categoria in todas_categorias %}
-            <p><a href="{% url 'supermarket.produtos_por_categoria' categoria.id %}">{{ categoria.descricao }}</a></p>
-        {% endfor %}
-        </div>
-    </div>
-
-    <div class="panel panel-success">
-        <div class="panel-heading"><span class="glyphicon glyphicon-tasks"></span> Ações</div>
-        <div class="panel-body">
-            <p><a href="{% url 'supermarket.novo_produto' %}">Inserir</a></p>
-        </div>
-    </div>
-{% endblock %}
-
+{% extends "layout.html" %}
+{% block titulo %}Produtos - Mercado com desconto{% endblock %}
 {% load static %}
 
 {% block principal %}
+    <section class="section-content">
+        <div class="container">
+            {% for produto in todos_produtos %}
+                <article>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">{{ produto.descricao }}</div>
+                        <div class="panel-body">Marca.: {{ produto.marca }} </br>
+                            Medida.: {{ produto.unidade_de_medida }} </br>
+                            {% if produto.imagem %}
+                                <img src="{{ produto.imagem.url }}" alt="Era pra aparecer uma imagem aqui!"><br>
+                                {{ produto.imagem.url }}<br>
+                                {{ produto.imagem }}<br>
+                                <img src="../../../media/img_produtos/arroz.jpg" alt="IMG">
+                            {% else %}
+                                Imagem não cadastrada
+                            {% endif %}</div>
 
-
-
-
-    {#    <section xmlns="http://www.w3.org/1999/html">#}
-    {#        <br>#}
-    {#        {% for produto in todos_produtos %}#}
-    {#            <article>#}
-    {#                <div class="panel panel-success">#}
-    {#                    <div class="panel-heading">{{ produto.descricao }}</div>#}
-    {#                    <div class="panel-body">Marca.: {{ produto.marca }} </br>#}
-    {#                        Medida.: {{ produto.unidade_de_medida }} </br>#}
-    {#                        {% if produto.imagem %}#}
-    {#                            <img src="{{ produto.imagem.url }}" alt="Era pra aparecer uma imagem aqui!"><br>#}
-    {#                            {{ produto.imagem.url }}<br>#}
-    {#                            {{ produto.imagem }}<br>#}
-    {#                            <img src="../../../media/img_produtos/arroz.jpg" alt="IMG">#}
-    {#                        {% else %}#}
-    {#                            Imagem não cadastrada#}
-    {#                        {% endif %}</div>#}
-    {##}
-    {#                        <img src="{{ MEDIA_URL }}{{ produto.imagem }}" width="45"#}
-    {#                                         height="30"></div>#}
-    {#                </div>#}
-    {#            </article>#}
-    {#        {% endfor %}#}
-    {#    </section>#}
+                        <img src="{{ MEDIA_URL }}{{ produto.imagem }}" width="45"
+                             height="30"></div>
+                </div>
+                </article>
+            {% endfor %}
+    </section>
+    </div>
+    </section>
 {% endblock %}

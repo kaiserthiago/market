@@ -1,25 +1,23 @@
-{% extends "supermarket/../layout.html" %}
+{% extends "layout.html" %}
 
-{% block titulo %} SuperMarket - Nova Promoção {% endblock %}
+{% block titulo %}Nova promoção - Mercado com desconto{% endblock %}
 
-{% block menu_lateral_esquerdo %}
-
-{% endblock %}
 
 {% block principal %}
-    <section xmlns="http://www.w3.org/1999/html">
-        <br>
-        <form action="" method="POST" class="post-form">
-            {% csrf_token %}
+    <section class="section-content">
+        <div class="container">
+            <form action="" method="POST" class="post-form">
+                {% csrf_token %}
 
-            {% for campo in nova_promocao %}
-                <div class="form-group">
-                    {{ campo.label }}{{ campo }}
-                </div>
-            {% endfor %}
+                {% for campo in nova_promocao %}
+                    <div class="form-group">
+                        {{ campo.label }}{{ campo }}
+                    </div>
+                {% endfor %}
 
-            <input type="submit" class="btn btn-primary" value="Cadastrar">
-            <input type="reset" class="btn btn-danger" value="Cancelar">
-        </form>
+                <input type="submit" class="btn btn-primary" value="Cadastrar">
+                <input type="reset" class="btn btn-danger" value="Cancelar">
+            </form>
+        </div>
     </section>
 {% endblock %}
