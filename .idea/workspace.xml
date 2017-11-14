@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c54a2c-9282-425e-9325-b4e6b4b78199" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/templates/registration/login.html" afterPath="$PROJECT_DIR$/login/templates/registration/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/templates/registration/register.html" afterPath="$PROJECT_DIR$/login/templates/registration/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/supermarket.css" afterPath="$PROJECT_DIR$/static/css/supermarket.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/forms.py" afterPath="$PROJECT_DIR$/supermarket/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/models.py" afterPath="$PROJECT_DIR$/supermarket/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/layout.html" afterPath="$PROJECT_DIR$/supermarket/templates/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/urls.py" afterPath="$PROJECT_DIR$/supermarket/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/views.py" afterPath="$PROJECT_DIR$/supermarket/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,12 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="novo_produto.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/supermarket/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="50">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="e#175#1066#0" expanded="false" />
+                <element signature="e#1109#1478#0" expanded="false" />
+                <element signature="e#1952#3155#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/supermarket/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="725">
-              <caret line="128" column="49" lean-forward="true" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+              <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -72,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/market/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
-              <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/supermarket/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
                 <element signature="e#612#1001#0" expanded="false" />
@@ -103,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supermarket.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="supermarket.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/supermarket.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -233,7 +224,6 @@
         <option value="$PROJECT_DIR$/login/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/login/templates/registration/register.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html" />
-        <option value="$PROJECT_DIR$/supermarket/forms.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html" />
         <option value="$PROJECT_DIR$/supermarket/urls.py" />
@@ -243,6 +233,7 @@
         <option value="$PROJECT_DIR$/supermarket/views.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" />
         <option value="$PROJECT_DIR$/static/css/supermarket.css" />
+        <option value="$PROJECT_DIR$/supermarket/forms.py" />
       </list>
     </option>
   </component>
@@ -651,19 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="54" column="97" lean-forward="false" selection-start-line="54" selection-start-column="97" selection-end-line="54" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-            <element signature="e#227#1118#0" expanded="false" />
-            <element signature="e#1161#1530#0" expanded="false" />
-            <element signature="e#2004#3207#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -707,7 +685,7 @@
     <entry file="file://$PROJECT_DIR$/market/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
-          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -730,7 +708,7 @@
     <entry file="file://$PROJECT_DIR$/supermarket/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
             <element signature="e#612#1001#0" expanded="false" />
@@ -753,7 +731,7 @@
     <entry file="file://$PROJECT_DIR$/supermarket/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
-          <caret line="128" column="49" lean-forward="true" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+          <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -771,8 +749,20 @@
     <entry file="file://$PROJECT_DIR$/static/css/supermarket.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#175#1066#0" expanded="false" />
+            <element signature="e#1109#1478#0" expanded="false" />
+            <element signature="e#1952#3155#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

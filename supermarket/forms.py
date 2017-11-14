@@ -1,6 +1,5 @@
 from django import forms
 from django.contrib.auth.models import User
-from bootstrap_datepicker.widgets import DatePicker
 
 from supermarket.models import Promocao, Produto, UserProfile
 
