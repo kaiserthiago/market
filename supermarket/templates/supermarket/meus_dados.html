@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Meus dados - Mercado com desconto{% endblock %}
+
+{% block principal %}
+    <section class="section-content">
+        <div class="container">
+            <h2 class="page-header">Meus dados</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                {{ profile_form.as_p }}
+                <button type="submit" class="btn btn-success">Salvar</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

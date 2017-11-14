@@ -1,6 +1,8 @@
 import datetime
 
 import os
+
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -21,7 +23,8 @@ class Cliente(models.Model):
         ordering = ['nome_fantasia', 'razao_social']
 
     def __str__(self):
-       return self.nome_fantasia
+        return self.nome_fantasia
+
 
 class Categoria(models.Model):
     descricao = models.CharField(max_length=150)
@@ -42,6 +45,7 @@ class Marca(models.Model):
     def __str__(self):
         return self.descricao_marca
 
+
 class UnidadeMedida(models.Model):
     descricao = models.CharField(max_length=150)
 
@@ -50,7 +54,8 @@ class UnidadeMedida(models.Model):
         ordering = ['descricao']
 
     def __str__(self):
-       return self.descricao
+        return self.descricao
+
 
 class Produto(models.Model):
     descricao = models.CharField(max_length=150)
@@ -63,7 +68,8 @@ class Produto(models.Model):
         ordering = ['descricao']
 
     def __str__(self):
-       return self.descricao
+        return self.descricao
+
 
 class Promocao(models.Model):
     cliente = models.ForeignKey(Cliente)
@@ -71,9 +77,23 @@ class Promocao(models.Model):
     data_inicio = models.DateField(default=datetime.date.today)
     data_fim = models.DateField()
     valor = models.DecimalField(decimal_places=2, max_digits=5)
+
     class Meta:
         verbose_name_plural = 'Promoções'
         ordering = ['produto', 'valor']
 
-    # def __str__(self):
-    #     return self.produto
+        # def __str__(self):
+        #     return self.produto
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, unique=True)
+    cpf = models.CharField(max_length=35, null=True, blank=True)
+    endereco = models.CharField(max_length=255, null=True, blank=True)
+    numero = models.CharField(max_length=20, null=True, blank=True)
+    complemento = models.CharField(max_length=255, null=True, blank=True)
+    bairro = models.CharField(max_length=255, null=True, blank=True)
+    cidade = models.CharField(max_length=100, null=True, blank=True)
+    estado = models.CharField(max_length=15, null=True, blank=True)
+    pais = models.CharField(max_length=15, null=True, blank=True)
+    cep = models.CharField(max_length=15, null=True, blank=True)
+    telefone = models.CharField(max_length=15, null=True, blank=True)

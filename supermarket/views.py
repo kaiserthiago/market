@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Avg, Count
 from datetime import date
@@ -6,8 +7,8 @@ import json
 import datetime
 
 # função pra trazer post pela categoria clicada
-from supermarket.forms import FormPromocao, FormProduto
-from supermarket.models import Produto, Categoria, Cliente, Marca, Promocao
+from supermarket.forms import FormPromocao, FormProduto, UserForm, UserProfileForm
+from supermarket.models import Produto, Categoria, Cliente, Marca, Promocao, UserProfile
 
 
 def produtos_por_categoria(request, categoria_id):
@@ -179,3 +180,45 @@ def novo_produto(request):
         form = FormProduto()
 
     return render(request, 'supermarket/novo_produto.html', {'novo_produto': form})
+
+def meus_dados(request):
+    user = User.objects.get(pk=request.user.pk)
+    user_form = UserForm(instance=user)
+
+    try:
+        user_profile = UserProfile.objects.get(user=user)
+    except:
+        user_profile = UserProfile()
+        user_profile.user = user
+        user_profile.save()
+
+    profile_form = UserProfileForm(instance=user_profile)
+
+    if request.method == 'POST':
+        user_form = UserForm(request.POST)
+        profile_form = UserProfileForm(request.POST)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user.first_name = user_form.cleaned_data['first_name']
+            user.last_name = user_form.cleaned_data['last_name']
+            user.save()
+
+            user_profile.cpf = profile_form.cleaned_data['cpf']
+            user_profile.endereco = profile_form.cleaned_data['endereco']
+            user_profile.numero = profile_form.cleaned_data['numero']
+            user_profile.complemento = profile_form.cleaned_data['complemento']
+            user_profile.cidade = profile_form.cleaned_data['cidade']
+            user_profile.bairro = profile_form.cleaned_data['bairro']
+            user_profile.estado = profile_form.cleaned_data['estado']
+            user_profile.pais = profile_form.cleaned_data['pais']
+            user_profile.cep = profile_form.cleaned_data['cep']
+            user_profile.telefone = profile_form.cleaned_data['telefone']
+            user_profile.save()
+
+    context = {
+        'user_form': user_form,
+        'profile_form': profile_form,
+        'user': user,
+    }
+
+    return render(request, 'supermarket/meus_dados.html', context)
