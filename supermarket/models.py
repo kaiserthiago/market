@@ -82,11 +82,10 @@ class Promocao(models.Model):
         verbose_name_plural = 'Promoções'
         ordering = ['produto', 'valor']
 
-        # def __str__(self):
-        #     return self.produto
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, unique=True)
+    cliente = models.OneToOneField(Cliente, unique=True, blank=True, null=True)
     cpf = models.CharField(max_length=35, null=True, blank=True)
     endereco = models.CharField(max_length=255, null=True, blank=True)
     numero = models.CharField(max_length=20, null=True, blank=True)

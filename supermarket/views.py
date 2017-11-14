@@ -1,13 +1,14 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Avg, Count
 from datetime import date
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 import json
 import datetime
 
 # função pra trazer post pela categoria clicada
-from supermarket.forms import FormPromocao, FormProduto, UserForm, UserProfileForm
+from supermarket.forms import PromocaoForm, FormProduto, UserForm, UserProfileForm
 from supermarket.models import Produto, Categoria, Cliente, Marca, Promocao, UserProfile
 
 
@@ -56,21 +57,6 @@ def promocao_por_produto(request, produto_id):
     }
 
     return render(request, 'supermarket/promocoes_por_produto.html', context)
-
-
-# def order_promocao_por_produto(request, ordem, produto_id):
-#     todas_categorias = Categoria.objects.all()
-#     filtro_produtos = Promocao.objects.filter(produto=produto_id, data_fim__gte=date.today()).order_by(
-#         'valor', 'data_fim', 'produto__descricao', 'cliente__nome_fantasia')
-#     descricao = Produto.objects.filter(id=produto_id)
-#
-#     context = {
-#         'todos_produtos': filtro_produtos,
-#         'todas_categorias': todas_categorias,
-#         'produto_descricao': descricao,
-#     }
-#
-#     return render(request, 'supermarket/promocoes_por_produto.html', context)
 
 
 def home(request):
@@ -138,28 +124,43 @@ def filtro_promocoes(request, cliente_id):
     return render(request, 'supermarket/promocoes.html', context)
 
 
+@login_required
 def nova_promocao(request):
-    form = FormPromocao(request.POST)
+    if request.method == 'POST':
+        form = PromocaoForm(request.POST)
+        if form.is_valid():
+            promocao = Promocao()
 
-    if form.is_valid():
+            promocao.cliente = request.user.userprofile.cliente
+            promocao.produto = form.cleaned_data['produto']
+            promocao.data_inicio = form.cleaned_data['data_inicio']
+            promocao.data_fim = form.cleaned_data['data_fim']
+            promocao.valor = form.cleaned_data['valor']
+            promocao.save()
 
-        promocao = Promocao()
+            return redirect('supermarket.home')
 
-        promocao.cliente = form.cleaned_data['cliente']
-        promocao.produto = form.cleaned_data['produto']
-        promocao.data_inicio = form.cleaned_data['data_inicio']
-        promocao.data_fim = form.cleaned_data['data_fim']
-        promocao.valor = form.cleaned_data['valor']
-        promocao.save()
+    form = PromocaoForm()
 
-        return redirect('supermarket.home')
-    else:
-
-        form = FormPromocao()
-
-    return render(request, 'supermarket/novo_promocao.html', {'nova_promocao': form})
+    context = {
+        'form': form,
+    }
+    return render(request, 'supermarket/novo_promocao.html', context)
 
 
+@login_required
+def minhas_promocoes(request):
+    promocoes = Promocao.objects.filter(cliente=request.user.userprofile.cliente).order_by('-data_fim')
+    cliente = get_object_or_404(Cliente, pk=request.user.userprofile.cliente.id)
+
+    context = {
+        'promocoes': promocoes,
+        'cliente': cliente,
+    }
+    return render(request, 'supermarket/minhas_promocoes.html', context)
+
+
+@login_required
 def novo_produto(request):
     form = FormProduto(request.POST)
 
@@ -181,6 +182,8 @@ def novo_produto(request):
 
     return render(request, 'supermarket/novo_produto.html', {'novo_produto': form})
 
+
+@login_required
 def meus_dados(request):
     user = User.objects.get(pk=request.user.pk)
     user_form = UserForm(instance=user)

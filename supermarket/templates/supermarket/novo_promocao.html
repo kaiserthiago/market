@@ -1,23 +1,24 @@
 {% extends "layout.html" %}
-
 {% block titulo %}Nova promoção - Mercado com desconto{% endblock %}
-
 
 {% block principal %}
     <section class="section-content">
         <div class="container">
-            <form action="" method="POST" class="post-form">
+            <h2 class="page-header">Nova promoção</h2>
+            <form action="" method="POST">
                 {% csrf_token %}
-
-                {% for campo in nova_promocao %}
-                    <div class="form-group">
-                        {{ campo.label }}{{ campo }}
-                    </div>
-                {% endfor %}
-
-                <input type="submit" class="btn btn-primary" value="Cadastrar">
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success" value="Cadastrar">
                 <input type="reset" class="btn btn-danger" value="Cancelar">
             </form>
         </div>
     </section>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+            $('#data_inicio').datetimepicker();
+            $('#data_fim').datetimepicker();
+        });
+    </script>
 {% endblock %}

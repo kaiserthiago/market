@@ -6,11 +6,12 @@
     <title>{% block titulo %}Mercado com desconto{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static '/css/supermarket.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css"/>
-    <link rel="stylesheet" href="{% static '/css/supermarket.css' %}">
+
 
     {% block link_css %} {% endblock %}
 
@@ -58,19 +59,23 @@
                                 class="fa fa-user-o"
                                 style="font-size:16px;"></i><span> {{ request.user.username }}</span></a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a href="#"><i
-                                        class="fa fa-pencil-square-o" style="font-size:16px"></i> Nova promoção</a>
-                            </li>
-                            <li>
-                                <a href="#"><i
-                                        class="fa fa-pencil-square" style="font-size:16px"></i> Minhas promoções</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="{% url 'admin:login' %}" target="_blank"><i
-                                        class="fa fa-tasks" style="font-size:16px"></i> Admin</a>
-                            </li>
+                            {% if request.user.userprofile.cliente %}
+                                <li>
+                                    <a href="{% url 'supermarket.nova_promocao' %}"><i
+                                            class="fa fa-pencil-square-o" style="font-size:16px"></i> Nova promoção</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'supermarket.minhas_promocoes' %}"><i
+                                            class="fa fa-pencil-square" style="font-size:16px"></i> Minhas promoções</a>
+                                </li>
+                                <li class="divider"></li>
+                            {% endif %}
+                            {% if request.user.is_staff %}
+                                <li>
+                                    <a href="{% url 'admin:login' %}" target="_blank"><i
+                                            class="fa fa-tasks" style="font-size:16px"></i> Admin</a>
+                                </li>
+                            {% endif %}
                             <li>
                                 <a href="{% url 'supermarket.meus_dados' %}"><i
                                         class="fa fa-user-circle-o" style="font-size:16px"></i> Meus dados</a>
@@ -88,7 +93,6 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false"><i class="fa fa-lock"></i> Acesso</a>
                         <ul class="dropdown-menu">
-                            <li class="divider"></li>
                             <li>
                                 <a href="{% url 'login_register' %}"><i
                                         class="fa fa-address-card-o" style="font-size:16px;"></i> Cadastre-se</a>
@@ -111,7 +115,7 @@
 <footer class="footer-market">
     <p>Copyright © - Todos os direitos reservados</p>
 </footer>
-
+{% block script %}{% endblock %}
 </body>
 <!-- Modal LOGOUT-->
 <div class="modal fade" id="modal-logout" role="dialog">
@@ -122,7 +126,7 @@
             <form method="POST" action="{% url 'logout' %}" class="post-form">
                 {% csrf_token %}
 
-                <div class="modal-header" style="padding:15px 50px;">
+                <div class="modal-header" style="padding:15px 50px; text-align: center">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

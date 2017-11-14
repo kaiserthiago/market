@@ -1,21 +1,35 @@
 from django import forms
 from django.contrib.auth.models import User
+from bootstrap_datepicker.widgets import DatePicker
 
 from supermarket.models import Promocao, Produto, UserProfile
 
 
-class FormPromocao(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(FormPromocao, self).__init__(*args, **kwargs)
-
-        for field in iter(self.fields):
-            self.fields[field].widget.attrs.update({
-                'class': 'form-control'
-            })
+class PromocaoForm(forms.ModelForm):
+    valor = forms.DecimalField(min_value=0,
+                               max_digits=32,
+                               decimal_places=2,
+                               initial="0",
+                               required=True,
+                               widget=forms.TextInput(attrs={'class': 'form-control input-sm required'}))
 
     class Meta:
         model = Promocao
-        fields = ['cliente', 'produto', 'data_inicio', 'data_fim', 'valor']
+        fields = ['produto', 'data_inicio', 'data_fim', 'valor']
+
+        widgets = {
+            'produto': forms.Select(attrs={'class': 'form-control'}),
+            'data_inicio': forms.TextInput(attrs={'class': 'form-control', 'id': 'data_inicio'}),
+            'data_fim': forms.TextInput(attrs={'class': 'form-control', 'id': 'data_fim'}),
+
+        }
+
+        labels = {
+            'produto': "Produto",
+            'data_inicio': "Início",
+            'data_fim': "Fim",
+            'valor': "Preço",
+        }
 
 
 class FormProduto(forms.ModelForm):
@@ -38,7 +52,7 @@ class UserForm(forms.ModelForm):
         fields = ('first_name', 'last_name')
 
         widgets = {
-            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control', 'autofocus': 'autofocus'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
@@ -51,7 +65,7 @@ class UserForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        exclude = ('user', 'remote_customer_id')
+        exclude = ('user', 'cliente', 'remote_customer_id')
 
         widgets = {
             'cpf': forms.TextInput(attrs={'class': 'form-control'}),

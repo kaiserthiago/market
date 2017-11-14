@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block titulo %}Minhas promoções - Mercado com desconto{% endblock %}
+
+{% block principal %}
+    <section class="section-content">
+        <div class="container">
+            <h2 class="page-header">Minhas promoções - {{ cliente.nome_fantasia }}</h2>
+            <table class="table table-striped">
+                <thead>
+                <th colspan="2">Descrição</th>
+                <th>Valor</th>
+                <th>Válido até</th>
+                </thead>
+                <tbody id="myTable">
+                {% for promocao in promocoes %}
+
+                    <tr>
+                        <td style="padding: 5px" style="vertical-align: middle">
+                            <img src="{{ promocao.produto.imagem.url }}" class="img-responsive"
+                                 width="75">
+                        </td>
+                        <td style="vertical-align: middle">{{ promocao.produto.descricao }}<br>
+                            {{ promocao.produto.marca }}<br>{{ promocao.produto.unidade_de_medida }}</td>
+                        <td style="vertical-align: middle">R$ {{ promocao.valor }}</td>
+                        <td style="vertical-align: middle">{{ promocao.data_fim }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="7" class="text-center bg-warning">Sem promoções!</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}
