@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c54a2c-9282-425e-9325-b4e6b4b78199" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/market/settings.py" afterPath="$PROJECT_DIR$/market/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/views.py" afterPath="$PROJECT_DIR$/supermarket/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,14 +19,14 @@
       <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="118" column="25" lean-forward="true" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+            <state relative-caret-position="175">
+              <caret line="89" column="42" lean-forward="false" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
               <folding>
-                <element signature="e#6167#6197#0#HTML" expanded="true" />
-                <element signature="e#6294#6317#0#HTML" expanded="true" />
-                <element signature="e#6377#6407#0#HTML" expanded="true" />
-                <marker date="1510837600720" expanded="false" signature="6705:6727" ph="..." />
-                <marker date="1510837600720" expanded="false" signature="7185:7207" ph="..." />
+                <element signature="e#6176#6206#0#HTML" expanded="true" />
+                <element signature="e#6303#6326#0#HTML" expanded="true" />
+                <element signature="e#6386#6416#0#HTML" expanded="true" />
+                <marker date="1510837646423" expanded="false" signature="6714:6736" ph="..." />
+                <marker date="1510837646423" expanded="false" signature="7194:7216" ph="..." />
               </folding>
             </state>
           </provider>
@@ -665,14 +662,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="118" column="25" lean-forward="true" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+        <state relative-caret-position="175">
+          <caret line="89" column="42" lean-forward="false" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
           <folding>
-            <element signature="e#6167#6197#0#HTML" expanded="true" />
-            <element signature="e#6294#6317#0#HTML" expanded="true" />
-            <element signature="e#6377#6407#0#HTML" expanded="true" />
-            <marker date="1510837600720" expanded="false" signature="6705:6727" ph="..." />
-            <marker date="1510837600720" expanded="false" signature="7185:7207" ph="..." />
+            <element signature="e#6176#6206#0#HTML" expanded="true" />
+            <element signature="e#6303#6326#0#HTML" expanded="true" />
+            <element signature="e#6386#6416#0#HTML" expanded="true" />
+            <marker date="1510837646423" expanded="false" signature="6714:6736" ph="..." />
+            <marker date="1510837646423" expanded="false" signature="7194:7216" ph="..." />
           </folding>
         </state>
       </provider>
