@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from django.db.models import Avg, Count
+from django.db.models import Avg, Count, Min
 from datetime import date
 from django.shortcuts import render, redirect, get_object_or_404
 import json
@@ -44,9 +44,9 @@ def promocao_por_produto(request, produto_id):
     # for cliente in cont:
     #     teste = Promocao.objects.filter(produto=produto_id, cliente=cliente.id).order_by('data_inicio')
 
-    queryset = Promocao.objects.filter(produto=produto_id).order_by('data_inicio')
+    queryset = Promocao.objects.filter(produto=produto_id).annotate(min_valor=Min('valor')).order_by('data_inicio')
     datas = [obj.data_inicio for obj in queryset]
-    precos = [float(obj.valor) for obj in queryset]
+    precos = [float(obj.min_valor) for obj in queryset]
 
     context = {
         'todos_produtos': filtro_produtos,

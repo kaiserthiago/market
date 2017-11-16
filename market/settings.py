@@ -139,4 +139,9 @@ ALGOLIA = {
 }
 
 LOGIN_REDIRECT_URL = '/'
+
 LOGIN_URL = '/login'
+
+# DATE_FORMAT = 'd/m/Y'
+
+DATETIME_INPUT_FORMATS = '%m/%d/%Y'
