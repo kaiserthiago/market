@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.conf.locale.pt_BR import formats as br_formats
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'b+ayy8@a@+!i1rj0b6tqln3jr$f0#ti-8)l44o1&@d3!cr6j2!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['supermarket.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['supermarket.pythonanywhere.com', '127.0.0.1', '192.168.0.103']
 
 
 # Application definition
@@ -145,3 +146,5 @@ LOGIN_URL = '/login'
 # DATE_FORMAT = 'd/m/Y'
 
 DATETIME_INPUT_FORMATS = '%m/%d/%Y'
+
+br_formats.DATE_FORMAT = 'd/m/y'
