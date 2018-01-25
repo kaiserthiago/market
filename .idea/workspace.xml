@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c54a2c-9282-425e-9325-b4e6b4b78199" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/market/settings.py" afterPath="$PROJECT_DIR$/market/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/supermarket.css" afterPath="$PROJECT_DIR$/static/css/supermarket.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/layout.html" afterPath="$PROJECT_DIR$/supermarket/templates/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/contato.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/contato.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" afterPath="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,25 +28,42 @@
       <file leaf-file-name="promocoes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2225">
-              <caret line="89" column="41" lean-forward="false" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+            <state relative-caret-position="50">
+              <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
               <folding>
-                <marker date="1510838228172" expanded="false" signature="6714:6736" ph="..." />
-                <marker date="1510838228172" expanded="false" signature="7194:7216" ph="..." />
+                <marker date="1516885960571" expanded="false" signature="6723:6745" ph="..." />
+                <marker date="1516885960571" expanded="false" signature="7203:7225" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/supermarket/templates/layout.html">
+      <file leaf-file-name="promocoes_por_produto.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="47" selection-end-column="36" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1516885808572" expanded="false" signature="2388:2402" ph="..." />
-              </folding>
+            <state relative-caret-position="50">
+              <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sobre.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contato.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/contato.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,7 +71,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="175">
               <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding>
                 <element signature="e#1833#1858#0#HTML" expanded="true" />
@@ -59,47 +80,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sobre.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html">
+      <file leaf-file-name="meus_dados.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="25">
+              <caret line="1" column="50" lean-forward="false" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supermarket.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/supermarket.css">
+      <file leaf-file-name="minhas_promocoes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <state relative-caret-position="25">
+              <caret line="1" column="57" lean-forward="false" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/market/settings.py">
+      <file leaf-file-name="novo_produto.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
-              <folding>
-                <element signature="e#310#319#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="25">
+              <caret line="1" column="53" lean-forward="false" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supermarket/views.py">
+      <file leaf-file-name="novo_promocao.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="87" column="98" lean-forward="false" selection-start-line="87" selection-start-column="98" selection-end-line="87" selection-end-column="98" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-                <element signature="e#1184#2216#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="25">
+              <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="produtos.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,28 +199,28 @@
         <option value="$PROJECT_DIR$/market/urls.py" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/layout.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/filtro.html" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/contato.html" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html" />
         <option value="$PROJECT_DIR$/login/templates/registration/success.html" />
         <option value="$PROJECT_DIR$/login/forms.py" />
         <option value="$PROJECT_DIR$/supermarket/admin.py" />
         <option value="$PROJECT_DIR$/login/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/login/templates/registration/register.html" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html" />
         <option value="$PROJECT_DIR$/supermarket/urls.py" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html" />
         <option value="$PROJECT_DIR$/supermarket/models.py" />
         <option value="$PROJECT_DIR$/supermarket/forms.py" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
         <option value="$PROJECT_DIR$/static/css/supermarket.css" />
         <option value="$PROJECT_DIR$/supermarket/views.py" />
         <option value="$PROJECT_DIR$/market/settings.py" />
-        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/supermarket/home.html" />
         <option value="$PROJECT_DIR$/supermarket/templates/layout.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/contato.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html" />
+        <option value="$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html" />
       </list>
     </option>
   </component>
@@ -527,13 +553,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/filtro.html" />
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/teste2.html" />
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -569,38 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="13" column="80" lean-forward="false" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -618,36 +609,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/contato.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/supermarket.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2225">
-          <caret line="89" column="41" lean-forward="false" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
-          <folding>
-            <marker date="1510838228172" expanded="false" signature="6714:6736" ph="..." />
-            <marker date="1510838228172" expanded="false" signature="7194:7216" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -672,17 +638,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html">
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="125">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1516885960472" expanded="false" signature="2397:2411" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/contato.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="175">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding>
             <element signature="e#1833#1858#0#HTML" expanded="true" />
@@ -690,14 +667,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supermarket/templates/layout.html">
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/meus_dados.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="47" selection-end-column="36" />
+        <state relative-caret-position="25">
+          <caret line="1" column="50" lean-forward="false" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/minhas_promocoes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="57" lean-forward="false" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/novo_produto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="53" lean-forward="false" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/novo_promocao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/produtos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1516885808572" expanded="false" signature="2388:2402" ph="..." />
+            <marker date="1516885960571" expanded="false" signature="6723:6745" ph="..." />
+            <marker date="1516885960571" expanded="false" signature="7203:7225" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/promocoes_por_produto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supermarket/templates/supermarket/sobre.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
